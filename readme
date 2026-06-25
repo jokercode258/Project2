@@ -1,131 +1,28 @@
 # Traffic Sign Recognition and Image-based QA
 
-## 1. Giới thiệu đề tài
+## 1. Mục đích dự án
 
-Dự án xây dựng hệ thống **nhận diện, phân loại biển báo giao thông và trả lời câu hỏi dựa trên hình ảnh**. Hệ thống sử dụng mô hình **YOLO26n** để phát hiện biển báo trong ảnh, sau đó kết hợp với cơ sở tri thức biển báo và module hỏi đáp rule-based để trả lời các câu hỏi của người dùng.
+Dự án xây dựng hệ thống **nhận diện, phân loại biển báo giao thông và trả lời câu hỏi dựa trên hình ảnh**.
 
-Ví dụ, người dùng có thể đưa vào một ảnh giao thông và hỏi:
+Hệ thống sử dụng mô hình **YOLO26n** để phát hiện biển báo trong ảnh. Sau đó, kết quả nhận diện được đưa vào cơ sở tri thức biển báo và module **QA rule-based** để trả lời các câu hỏi như:
 
 * Đây là biển gì?
 * Biển này có ý nghĩa gì?
-* Biển này thuộc nhóm nào?
 * Tốc độ tối đa là bao nhiêu?
 * Có được đi vào đường này không?
 * Có được đỗ xe không?
-* Cần chú ý gì khi đi qua đoạn đường này?
 
-Hệ thống không chỉ hiển thị bounding box và nhãn lớp, mà còn diễn giải ý nghĩa biển báo thành câu trả lời dễ hiểu.
+## 2. Công nghệ sử dụng
 
-## 2. Chức năng chính
+* Python
+* Ultralytics YOLO
+* OpenCV
+* Tkinter
+* Pandas
+* Matplotlib
+* Pillow
 
-Dự án hỗ trợ các chức năng chính sau:
-
-* Nhận diện biển báo giao thông trong ảnh bằng YOLO26n.
-* Phân loại biển báo vào 15 lớp đã chọn từ bộ dữ liệu TT100K.
-* Hiển thị bounding box, tên biển báo và confidence score.
-* Xây dựng cơ sở tri thức biển báo gồm tên, nhóm, ý nghĩa, hành động bị cấm/được phép và tốc độ giới hạn.
-* Trả lời câu hỏi dựa trên kết quả nhận diện bằng module QA rule-based.
-* Đánh giá mô hình YOLO bằng Precision, Recall, mAP50 và mAP50-95.
-* Đánh giá module QA theo hai chế độ: QA-focused và end-to-end.
-* Cung cấp ứng dụng desktop để demo hệ thống.
-
-## 3. Bộ dữ liệu
-
-Dữ liệu được xây dựng dựa trên bộ dữ liệu **TT100K**. Trong phạm vi dự án, dữ liệu được lọc xuống còn 15 lớp biển báo nhằm phù hợp với mục tiêu thực nghiệm và demo.
-
-Danh sách 15 lớp được sử dụng:
-
-| STT | Mã lớp | Tên biển báo                    |
-| --- | ------ | ------------------------------- |
-| 1   | pn     | Cấm đỗ xe                       |
-| 2   | pne    | Cấm đi vào                      |
-| 3   | p11    | Cấm bấm còi                     |
-| 4   | p26    | Cấm xe tải đi vào               |
-| 5   | i2     | Đường dành cho xe không động cơ |
-| 6   | i4     | Đường dành cho xe cơ giới       |
-| 7   | i5     | Đi bên phải                     |
-| 8   | p3     | Cấm xe khách lớn đi vào         |
-| 9   | ph     | Hạn chế chiều cao               |
-| 10  | pl20   | Giới hạn tốc độ 20 km/h         |
-| 11  | pl30   | Giới hạn tốc độ 30 km/h         |
-| 12  | pl40   | Giới hạn tốc độ 40 km/h         |
-| 13  | pl50   | Giới hạn tốc độ 50 km/h         |
-| 14  | pl80   | Giới hạn tốc độ 80 km/h         |
-| 15  | pl90   | Giới hạn tốc độ 90 km/h         |
-
-Dữ liệu sau khi lọc được tổ chức theo định dạng YOLO:
-
-```text
-data_v1_filtered/
-├── images/
-│   ├── train/
-│   └── val/
-├── labels/
-│   ├── train/
-│   └── val/
-├── data.yaml
-└── demo.mp4
-```
-
-## 4. Cấu trúc thư mục
-
-Cấu trúc chính của project:
-
-```text
-PROJECT2/
-├── apps/
-│   └── desktop_app.py
-│
-├── data_v1_filtered/
-│   ├── images/
-│   ├── labels/
-│   ├── data.yaml
-│   └── demo.mp4
-│
-├── metadata/
-│   ├── class_distribution.csv
-│   ├── label_map.csv
-│   └── selected_classes.txt
-│
-├── models/
-│   └── baseline_v1_best.pt
-│
-├── reports/
-│   ├── evaluation/
-│   ├── inference/
-│   ├── preview_filtered/
-│   └── qa/
-│
-├── scripts/
-│   ├── train_baseline.py
-│   ├── evaluate_validation.py
-│   ├── create_qa_test_cases.py
-│   ├── evaluate_qa.py
-│   ├── predict_image_with_qa.py
-│   └── predict_video.py
-│
-├── src/
-│   ├── __init__.py
-│   ├── config.py
-│   ├── qa_module.py
-│   └── sign_knowledge.py
-│
-└── .gitignore
-```
-
-Ý nghĩa một số thư mục:
-
-* `apps/`: chứa ứng dụng desktop demo.
-* `src/`: chứa code lõi của hệ thống.
-* `scripts/`: chứa các script huấn luyện, đánh giá và dự đoán.
-* `models/`: chứa model đã huấn luyện.
-* `metadata/`: chứa thông tin lớp và ánh xạ nhãn.
-* `reports/`: chứa kết quả đánh giá, ảnh inference và kết quả QA.
-* `data_v1_filtered/`: chứa dữ liệu đã lọc theo định dạng YOLO.
-
-## 5. Cài đặt môi trường
-
-Dự án được phát triển bằng Python. Nên sử dụng môi trường ảo để cài đặt thư viện.
+## 3. Cài đặt môi trường
 
 Tạo môi trường ảo:
 
@@ -145,18 +42,92 @@ Cài đặt các thư viện cần thiết:
 pip install ultralytics opencv-python pandas matplotlib pillow numpy
 ```
 
-Các thư viện chính được sử dụng:
+## 4. Chuẩn bị dữ liệu
 
-* `ultralytics`: huấn luyện và suy luận YOLO.
-* `opencv-python`: xử lý ảnh và video.
-* `pandas`: đọc, ghi và tổng hợp kết quả đánh giá.
-* `matplotlib`: vẽ biểu đồ kết quả.
-* `pillow`: hiển thị ảnh trong ứng dụng desktop.
-* `tkinter`: xây dựng giao diện desktop.
+Do dữ liệu TT100K có kích thước lớn nên repository không lưu trực tiếp dữ liệu.
 
-## 6. Chạy ứng dụng desktop
+Người dùng cần tải bộ dữ liệu **TT100K** gốc
 
-Để chạy ứng dụng demo:
+## 5. Cấu trúc project
+
+```text
+PROJECT2/
+├── apps/
+│   └── desktop_app.py
+│
+├── scripts/
+│   ├── train_baseline.py
+│   ├── evaluate_validation.py
+│   ├── create_qa_test_cases.py
+│   ├── evaluate_qa.py
+│   ├── predict_image_with_qa.py
+│   └── predict_video.py
+│
+├── src/
+│   ├── __init__.py
+│   ├── config.py
+│   ├── qa_module.py
+│   └── sign_knowledge.py
+│
+├── data_v1_filtered/
+├── models/
+├── reports/
+├── metadata/
+└── README.md
+```
+
+## 6. Huấn luyện mô hình
+
+Sau khi đã chuẩn bị dữ liệu trong thư mục `data_v1_filtered/`, chạy:
+
+```powershell
+python scripts/train_baseline.py
+```
+
+Script `train_baseline.py` đọc dữ liệu từ:
+
+```text
+data_v1_filtered/data.yaml
+```
+
+Cơ chế huấn luyện:
+
+* Nếu chưa có `models/baseline_v1_best.pt`, hệ thống sẽ train lần đầu từ model YOLO26n pretrained.
+* Nếu đã có `models/baseline_v1_best.pt`, hệ thống sẽ load model này và train tiếp từ checkpoint tốt nhất trước đó.
+
+Cách này giúp có thể train nhiều lần mà không cần huấn luyện lại từ đầu.
+
+Model tốt nhất sau huấn luyện được lưu tại:
+
+```text
+models/baseline_v1_best.pt
+```
+
+## 7. Đánh giá mô hình
+
+Đánh giá mô hình YOLO trên tập validation:
+
+```powershell
+python scripts/evaluate_validation.py
+```
+
+Đánh giá module hỏi đáp ở chế độ QA-focused:
+
+```powershell
+python scripts/create_qa_test_cases.py --mode best --set-default
+python scripts/evaluate_qa.py
+```
+
+Đánh giá toàn bộ pipeline end-to-end:
+
+```powershell
+python scripts/create_qa_test_cases.py --mode label --set-default
+python scripts/evaluate_qa.py
+```
+
+## 8. Chạy ứng dụng demo
+
+Chạy ứng dụng desktop:
 
 ```powershell
 python apps/desktop_app.py
@@ -165,132 +136,20 @@ python apps/desktop_app.py
 Ứng dụng cho phép người dùng:
 
 1. Chọn ảnh từ máy tính.
-2. Nhập câu hỏi hoặc chọn câu hỏi mẫu.
-3. Điều chỉnh ngưỡng YOLO confidence và QA confidence.
-4. Chạy nhận diện biển báo.
-5. Xem ảnh đã vẽ bounding box và câu trả lời của hệ thống.
+2. Nhập câu hỏi.
+3. Chạy nhận diện biển báo.
+4. Xem ảnh đã vẽ bounding box.
+5. Xem câu trả lời của hệ thống.
 
-## 7. Huấn luyện mô hình
+## 9. Dự đoán ảnh và video
 
-Mô hình được huấn luyện dựa trên thư viện Ultralytics YOLO. Dữ liệu huấn luyện được khai báo trong file:
-
-```text
-data_v1_filtered/data.yaml
-```
-
-Để train từ đầu hoặc tiếp:
-
-```powershell
-python scripts/train_baseline.py
-```
-
-Script `train_baseline.py` thực hiện các bước:
-
-* Load model từ `models/baseline_v1_best.pt`.
-* Train tiếp trên dữ liệu trong `data.yaml`.
-* Sử dụng cấu hình chính:
-
-  * `epochs = 30`
-  * `imgsz = 640`
-  * `batch = 4`
-  * `device = 0`
-  * `patience = 20`
-* Lưu kết quả vào `runs/detect/baseline_v1_final`.
-* Copy model tốt nhất về `models/baseline_v1_best.pt`.
-
-## 8. Đánh giá mô hình YOLO
-
-Để đánh giá mô hình trên tập validation:
-
-```powershell
-python scripts/evaluate_validation.py
-```
-
-Script này sẽ:
-
-* Load model từ `models/baseline_v1_best.pt`.
-* Đánh giá trên tập validation.
-* Tính các chỉ số Precision, Recall, mAP50 và mAP50-95.
-* Sinh các biểu đồ đánh giá như:
-
-  * Precision-Recall curve.
-  * F1-Confidence curve.
-  * Precision-Confidence curve.
-  * Recall-Confidence curve.
-  * Confusion matrix.
-
-Kết quả đánh giá chính:
-
-| Chỉ số    | Giá trị |
-| --------- | ------- |
-| Precision | 0.7491  |
-| Recall    | 0.6817  |
-| mAP50     | 0.7561  |
-| mAP50-95  | 0.5838  |
-
-## 9. Đánh giá module hỏi đáp
-
-Module QA được đánh giá theo hai chế độ:
-
-### 9.1. QA-focused
-
-Chế độ này chọn các ảnh mà YOLO phát hiện đúng biển báo với confidence đủ cao. Mục tiêu là đánh giá riêng module QA khi đầu vào detection đáng tin cậy.
-
-Tạo bộ test QA-focused:
-
-```powershell
-python scripts/create_qa_test_cases.py --mode best --set-default
-```
-
-Đánh giá QA:
-
-```powershell
-python scripts/evaluate_qa.py
-```
-
-Kết quả:
-
-| Tổng số câu hỏi | Số câu đúng | Accuracy |
-| --------------- | ----------- | -------- |
-| 92              | 92          | 100%     |
-
-### 9.2. End-to-end
-
-Chế độ này đánh giá toàn bộ pipeline từ ảnh đầu vào, qua YOLO detection, đến module QA.
-
-Tạo bộ test end-to-end:
-
-```powershell
-python scripts/create_qa_test_cases.py --mode label --set-default
-```
-
-Đánh giá QA:
-
-```powershell
-python scripts/evaluate_qa.py
-```
-
-Kết quả:
-
-| Tổng số câu hỏi | Số câu đúng | Accuracy |
-| --------------- | ----------- | -------- |
-| 92              | 80          | 86.96%   |
-
-Kết quả cho thấy module QA hoạt động tốt khi detection đầu vào đáng tin cậy. Sai số trong chế độ end-to-end chủ yếu đến từ giai đoạn nhận diện của YOLO, đặc biệt với nhóm biển giới hạn tốc độ.
-
-## 10. Dự đoán ảnh
-
-Để chạy dự đoán ảnh kèm hỏi đáp:
+Dự đoán ảnh kèm hỏi đáp:
 
 ```powershell
 python scripts/predict_image_with_qa.py
 ```
 
-Script này dùng model đã huấn luyện để nhận diện biển báo trong ảnh và trả lời câu hỏi dựa trên kết quả nhận diện.
-
-## 11. Dự đoán video
-
-Để chạy nhận diện biển báo trên video demo:
+Dự đoán video demo:
 
 ```powershell
 python scripts/predict_video.py
@@ -307,38 +166,3 @@ Video kết quả được lưu tại:
 ```text
 reports/inference/output_video_named.mp4
 ```
-
-## 12. Cách hoạt động của module QA
-
-Module QA trong dự án là **rule-based QA**, không phải mô hình ngôn ngữ được train riêng.
-
-Luồng hoạt động:
-
-```text
-YOLO detection
-→ Lọc detection theo confidence
-→ Tra cứu cơ sở tri thức biển báo
-→ Xây dựng facts
-→ Phân loại intent câu hỏi
-→ Gọi hàm trả lời tương ứng
-→ Sinh câu trả lời
-```
-
-Module QA dựa trên ba thành phần chính:
-
-1. **Kết quả nhận diện từ YOLO**: mã lớp, bounding box, confidence.
-2. **Cơ sở tri thức biển báo**: tên biển, nhóm biển, ý nghĩa, tốc độ giới hạn, hành động bị cấm/được phép.
-3. **Luật phân loại intent và sinh câu trả lời**: xác định người dùng hỏi tên biển, ý nghĩa, nhóm biển, tốc độ, hành vi bị cấm hay tóm tắt tình huống.
-
-Một số intent được hỗ trợ:
-
-* `what_sign`: hỏi tên biển báo.
-* `meaning`: hỏi ý nghĩa biển báo.
-* `group`: hỏi nhóm biển báo.
-* `speed_limit`: hỏi tốc độ tối đa.
-* `parking`: hỏi về việc đỗ xe.
-* `entry`: hỏi về việc đi vào.
-* `truck`: hỏi xe tải có được đi vào không.
-* `large_bus`: hỏi xe khách lớn có được đi vào không.
-* `situation_advice`: hỏi khuyến nghị tình huống.
-* `summary`: tóm tắt kết quả nhận diện.
