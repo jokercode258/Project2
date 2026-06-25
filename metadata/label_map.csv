@@ -1,0 +1,16 @@
+yolo_id,raw_class,project_name,display_name,group
+0,pn,pn,pn,prohibitory
+1,pne,pne,pne,prohibitory
+2,p11,p11,p11,prohibitory
+3,p26,p26,p26,prohibitory
+4,i2,i2,i2,mandatory
+5,i4,i4,i4,mandatory
+6,i5,i5,i5,mandatory
+7,p3,p3,p3,prohibitory
+8,ph,ph,ph,prohibitory
+9,pl20,pl20,pl20,speed_limit
+10,pl30,pl30,pl30,speed_limit
+11,pl40,pl40,pl40,speed_limit
+12,pl50,pl50,pl50,speed_limit
+13,pl80,pl80,pl80,speed_limit
+14,pl90,pl90,pl90,speed_limit

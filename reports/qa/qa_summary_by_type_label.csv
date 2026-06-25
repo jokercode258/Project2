@@ -1,0 +1,14 @@
+﻿type,count,sum,mean
+direction,1,1,1.0
+entry,1,1,1.0
+group,15,15,1.0
+height,1,1,1.0
+honking,1,1,1.0
+large_bus,1,1,1.0
+meaning,15,13,0.8666666666666667
+parking,1,1,1.0
+situation_advice,13,11,0.8461538461538461
+speed_limit,12,8,0.6666666666666666
+summary,15,13,0.8666666666666667
+truck,1,1,1.0
+what_sign,15,13,0.8666666666666667

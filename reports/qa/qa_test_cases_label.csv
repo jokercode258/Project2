@@ -1,0 +1,93 @@
+﻿image,question,expected_keyword,type,class_code
+D:\20252\project2\data_v1_filtered\images\val\10128.jpg,Đây là biển gì?,Cấm đỗ xe,what_sign,pn
+D:\20252\project2\data_v1_filtered\images\val\10128.jpg,Biển này có ý nghĩa gì?,Cấm đỗ xe,meaning,pn
+D:\20252\project2\data_v1_filtered\images\val\10128.jpg,Biển này thuộc nhóm nào?,Biển cấm,group,pn
+D:\20252\project2\data_v1_filtered\images\val\10128.jpg,Tóm tắt tình huống trong ảnh.,Cấm đỗ xe,summary,pn
+D:\20252\project2\data_v1_filtered\images\val\10128.jpg,Có được đỗ xe không?,Không được đỗ xe,parking,pn
+D:\20252\project2\data_v1_filtered\images\val\10128.jpg,Cần chú ý gì khi đi qua đoạn đường này?,Không đỗ xe,situation_advice,pn
+D:\20252\project2\data_v1_filtered\images\val\10169 (2).jpg,Đây là biển gì?,Cấm đi vào,what_sign,pne
+D:\20252\project2\data_v1_filtered\images\val\10169 (2).jpg,Biển này có ý nghĩa gì?,Cấm đi vào,meaning,pne
+D:\20252\project2\data_v1_filtered\images\val\10169 (2).jpg,Biển này thuộc nhóm nào?,Biển cấm,group,pne
+D:\20252\project2\data_v1_filtered\images\val\10169 (2).jpg,Tóm tắt tình huống trong ảnh.,Cấm đi vào,summary,pne
+D:\20252\project2\data_v1_filtered\images\val\10169 (2).jpg,Có được đi vào đường này không?,Không được đi vào,entry,pne
+D:\20252\project2\data_v1_filtered\images\val\10169 (2).jpg,Cần chú ý gì khi đi qua đoạn đường này?,Không đi vào,situation_advice,pne
+D:\20252\project2\data_v1_filtered\images\val\10122.jpg,Đây là biển gì?,Cấm bấm còi,what_sign,p11
+D:\20252\project2\data_v1_filtered\images\val\10122.jpg,Biển này có ý nghĩa gì?,Cấm bấm còi,meaning,p11
+D:\20252\project2\data_v1_filtered\images\val\10122.jpg,Biển này thuộc nhóm nào?,Biển cấm,group,p11
+D:\20252\project2\data_v1_filtered\images\val\10122.jpg,Tóm tắt tình huống trong ảnh.,Cấm bấm còi,summary,p11
+D:\20252\project2\data_v1_filtered\images\val\10122.jpg,Có được bấm còi không?,Không được bấm còi,honking,p11
+D:\20252\project2\data_v1_filtered\images\val\10122.jpg,Cần chú ý gì khi đi qua đoạn đường này?,Không sử dụng còi,situation_advice,p11
+D:\20252\project2\data_v1_filtered\images\val\10020.jpg,Đây là biển gì?,Cấm xe tải đi vào,what_sign,p26
+D:\20252\project2\data_v1_filtered\images\val\10020.jpg,Biển này có ý nghĩa gì?,Cấm xe tải đi vào,meaning,p26
+D:\20252\project2\data_v1_filtered\images\val\10020.jpg,Biển này thuộc nhóm nào?,Biển cấm,group,p26
+D:\20252\project2\data_v1_filtered\images\val\10020.jpg,Tóm tắt tình huống trong ảnh.,Cấm xe tải đi vào,summary,p26
+D:\20252\project2\data_v1_filtered\images\val\10020.jpg,Xe tải có được đi vào không?,Xe tải không được đi vào,truck,p26
+D:\20252\project2\data_v1_filtered\images\val\10020.jpg,Cần chú ý gì khi đi qua đoạn đường này?,Xe tải không được đi vào,situation_advice,p26
+D:\20252\project2\data_v1_filtered\images\val\10169 (2).jpg,Đây là biển gì?,Đường dành cho xe không động cơ,what_sign,i2
+D:\20252\project2\data_v1_filtered\images\val\10169 (2).jpg,Biển này có ý nghĩa gì?,Đường dành cho xe không động cơ,meaning,i2
+D:\20252\project2\data_v1_filtered\images\val\10169 (2).jpg,Biển này thuộc nhóm nào?,Biển chỉ dẫn,group,i2
+D:\20252\project2\data_v1_filtered\images\val\10169 (2).jpg,Tóm tắt tình huống trong ảnh.,Đường dành cho xe không động cơ,summary,i2
+D:\20252\project2\data_v1_filtered\images\val\10139 (2).jpg,Đây là biển gì?,Đường dành cho xe cơ giới,what_sign,i4
+D:\20252\project2\data_v1_filtered\images\val\10139 (2).jpg,Biển này có ý nghĩa gì?,Đường dành cho xe cơ giới,meaning,i4
+D:\20252\project2\data_v1_filtered\images\val\10139 (2).jpg,Biển này thuộc nhóm nào?,Biển chỉ dẫn,group,i4
+D:\20252\project2\data_v1_filtered\images\val\10139 (2).jpg,Tóm tắt tình huống trong ảnh.,Đường dành cho xe cơ giới,summary,i4
+D:\20252\project2\data_v1_filtered\images\val\11438 (2).jpg,Đây là biển gì?,Đi bên phải,what_sign,i5
+D:\20252\project2\data_v1_filtered\images\val\11438 (2).jpg,Biển này có ý nghĩa gì?,Đi bên phải,meaning,i5
+D:\20252\project2\data_v1_filtered\images\val\11438 (2).jpg,Biển này thuộc nhóm nào?,Biển bắt buộc,group,i5
+D:\20252\project2\data_v1_filtered\images\val\11438 (2).jpg,Tóm tắt tình huống trong ảnh.,Đi bên phải,summary,i5
+D:\20252\project2\data_v1_filtered\images\val\11438 (2).jpg,Phải đi bên nào?,bên phải,direction,i5
+D:\20252\project2\data_v1_filtered\images\val\11438 (2).jpg,Cần chú ý gì khi đi qua đoạn đường này?,bên phải,situation_advice,i5
+D:\20252\project2\data_v1_filtered\images\val\11640 (2).jpg,Đây là biển gì?,Cấm xe khách lớn đi vào,what_sign,p3
+D:\20252\project2\data_v1_filtered\images\val\11640 (2).jpg,Biển này có ý nghĩa gì?,Cấm xe khách lớn đi vào,meaning,p3
+D:\20252\project2\data_v1_filtered\images\val\11640 (2).jpg,Biển này thuộc nhóm nào?,Biển cấm,group,p3
+D:\20252\project2\data_v1_filtered\images\val\11640 (2).jpg,Tóm tắt tình huống trong ảnh.,Cấm xe khách lớn đi vào,summary,p3
+D:\20252\project2\data_v1_filtered\images\val\11640 (2).jpg,Xe khách lớn có được đi vào không?,Xe khách lớn không được đi vào,large_bus,p3
+D:\20252\project2\data_v1_filtered\images\val\11640 (2).jpg,Cần chú ý gì khi đi qua đoạn đường này?,Xe khách lớn không được đi vào,situation_advice,p3
+D:\20252\project2\data_v1_filtered\images\val\10150 (2).jpg,Đây là biển gì?,Hạn chế chiều cao,what_sign,ph
+D:\20252\project2\data_v1_filtered\images\val\10150 (2).jpg,Biển này có ý nghĩa gì?,Hạn chế chiều cao,meaning,ph
+D:\20252\project2\data_v1_filtered\images\val\10150 (2).jpg,Biển này thuộc nhóm nào?,Biển hạn chế,group,ph
+D:\20252\project2\data_v1_filtered\images\val\10150 (2).jpg,Tóm tắt tình huống trong ảnh.,Hạn chế chiều cao,summary,ph
+D:\20252\project2\data_v1_filtered\images\val\10150 (2).jpg,Cần chú ý gì về chiều cao?,chiều cao,height,ph
+D:\20252\project2\data_v1_filtered\images\val\10150 (2).jpg,Cần chú ý gì khi đi qua đoạn đường này?,chiều cao,situation_advice,ph
+D:\20252\project2\data_v1_filtered\images\val\10009 (2).jpg,Đây là biển gì?,Giới hạn tốc độ 20 km/h,what_sign,pl20
+D:\20252\project2\data_v1_filtered\images\val\10009 (2).jpg,Biển này có ý nghĩa gì?,Giới hạn tốc độ 20 km/h,meaning,pl20
+D:\20252\project2\data_v1_filtered\images\val\10009 (2).jpg,Biển này thuộc nhóm nào?,Biển giới hạn tốc độ,group,pl20
+D:\20252\project2\data_v1_filtered\images\val\10009 (2).jpg,Tóm tắt tình huống trong ảnh.,Giới hạn tốc độ 20 km/h,summary,pl20
+D:\20252\project2\data_v1_filtered\images\val\10009 (2).jpg,Tốc độ tối đa là bao nhiêu?,20,speed_limit,pl20
+D:\20252\project2\data_v1_filtered\images\val\10009 (2).jpg,Có được chạy quá 20 km/h không?,20,speed_limit,pl20
+D:\20252\project2\data_v1_filtered\images\val\10009 (2).jpg,Cần chú ý gì khi đi qua đoạn đường này?,20,situation_advice,pl20
+D:\20252\project2\data_v1_filtered\images\val\10375.jpg,Đây là biển gì?,Giới hạn tốc độ 30 km/h,what_sign,pl30
+D:\20252\project2\data_v1_filtered\images\val\10375.jpg,Biển này có ý nghĩa gì?,Giới hạn tốc độ 30 km/h,meaning,pl30
+D:\20252\project2\data_v1_filtered\images\val\10375.jpg,Biển này thuộc nhóm nào?,Biển giới hạn tốc độ,group,pl30
+D:\20252\project2\data_v1_filtered\images\val\10375.jpg,Tóm tắt tình huống trong ảnh.,Giới hạn tốc độ 30 km/h,summary,pl30
+D:\20252\project2\data_v1_filtered\images\val\10375.jpg,Tốc độ tối đa là bao nhiêu?,30,speed_limit,pl30
+D:\20252\project2\data_v1_filtered\images\val\10375.jpg,Có được chạy quá 30 km/h không?,30,speed_limit,pl30
+D:\20252\project2\data_v1_filtered\images\val\10375.jpg,Cần chú ý gì khi đi qua đoạn đường này?,30,situation_advice,pl30
+D:\20252\project2\data_v1_filtered\images\val\10009.jpg,Đây là biển gì?,Giới hạn tốc độ 40 km/h,what_sign,pl40
+D:\20252\project2\data_v1_filtered\images\val\10009.jpg,Biển này có ý nghĩa gì?,Giới hạn tốc độ 40 km/h,meaning,pl40
+D:\20252\project2\data_v1_filtered\images\val\10009.jpg,Biển này thuộc nhóm nào?,Biển giới hạn tốc độ,group,pl40
+D:\20252\project2\data_v1_filtered\images\val\10009.jpg,Tóm tắt tình huống trong ảnh.,Giới hạn tốc độ 40 km/h,summary,pl40
+D:\20252\project2\data_v1_filtered\images\val\10009.jpg,Tốc độ tối đa là bao nhiêu?,40,speed_limit,pl40
+D:\20252\project2\data_v1_filtered\images\val\10009.jpg,Có được chạy quá 40 km/h không?,40,speed_limit,pl40
+D:\20252\project2\data_v1_filtered\images\val\10009.jpg,Cần chú ý gì khi đi qua đoạn đường này?,40,situation_advice,pl40
+D:\20252\project2\data_v1_filtered\images\val\10150.jpg,Đây là biển gì?,Giới hạn tốc độ 50 km/h,what_sign,pl50
+D:\20252\project2\data_v1_filtered\images\val\10150.jpg,Biển này có ý nghĩa gì?,Giới hạn tốc độ 50 km/h,meaning,pl50
+D:\20252\project2\data_v1_filtered\images\val\10150.jpg,Biển này thuộc nhóm nào?,Biển giới hạn tốc độ,group,pl50
+D:\20252\project2\data_v1_filtered\images\val\10150.jpg,Tóm tắt tình huống trong ảnh.,Giới hạn tốc độ 50 km/h,summary,pl50
+D:\20252\project2\data_v1_filtered\images\val\10150.jpg,Tốc độ tối đa là bao nhiêu?,50,speed_limit,pl50
+D:\20252\project2\data_v1_filtered\images\val\10150.jpg,Có được chạy quá 50 km/h không?,50,speed_limit,pl50
+D:\20252\project2\data_v1_filtered\images\val\10150.jpg,Cần chú ý gì khi đi qua đoạn đường này?,50,situation_advice,pl50
+D:\20252\project2\data_v1_filtered\images\val\10150 (4).jpg,Đây là biển gì?,Giới hạn tốc độ 80 km/h,what_sign,pl80
+D:\20252\project2\data_v1_filtered\images\val\10150 (4).jpg,Biển này có ý nghĩa gì?,Giới hạn tốc độ 80 km/h,meaning,pl80
+D:\20252\project2\data_v1_filtered\images\val\10150 (4).jpg,Biển này thuộc nhóm nào?,Biển giới hạn tốc độ,group,pl80
+D:\20252\project2\data_v1_filtered\images\val\10150 (4).jpg,Tóm tắt tình huống trong ảnh.,Giới hạn tốc độ 80 km/h,summary,pl80
+D:\20252\project2\data_v1_filtered\images\val\10150 (4).jpg,Tốc độ tối đa là bao nhiêu?,80,speed_limit,pl80
+D:\20252\project2\data_v1_filtered\images\val\10150 (4).jpg,Có được chạy quá 80 km/h không?,80,speed_limit,pl80
+D:\20252\project2\data_v1_filtered\images\val\10150 (4).jpg,Cần chú ý gì khi đi qua đoạn đường này?,80,situation_advice,pl80
+D:\20252\project2\data_v1_filtered\images\val\10150 (2).jpg,Đây là biển gì?,Giới hạn tốc độ 90 km/h,what_sign,pl90
+D:\20252\project2\data_v1_filtered\images\val\10150 (2).jpg,Biển này có ý nghĩa gì?,Giới hạn tốc độ 90 km/h,meaning,pl90
+D:\20252\project2\data_v1_filtered\images\val\10150 (2).jpg,Biển này thuộc nhóm nào?,Biển giới hạn tốc độ,group,pl90
+D:\20252\project2\data_v1_filtered\images\val\10150 (2).jpg,Tóm tắt tình huống trong ảnh.,Giới hạn tốc độ 90 km/h,summary,pl90
+D:\20252\project2\data_v1_filtered\images\val\10150 (2).jpg,Tốc độ tối đa là bao nhiêu?,90,speed_limit,pl90
+D:\20252\project2\data_v1_filtered\images\val\10150 (2).jpg,Có được chạy quá 90 km/h không?,90,speed_limit,pl90
+D:\20252\project2\data_v1_filtered\images\val\10150 (2).jpg,Cần chú ý gì khi đi qua đoạn đường này?,90,situation_advice,pl90

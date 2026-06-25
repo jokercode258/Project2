@@ -1,0 +1,266 @@
+﻿image,class_code,type,question,expected_keyword,answer,intent,detected_summary,reliable_summary,correct
+D:\20252\project2\data_v1_filtered\images\val\68863.jpg,pn,what_sign,Đây là biển gì?,Cấm đỗ xe,"Trong ảnh phát hiện các biển báo sau:
+- Cấm đỗ xe (độ tin cậy 0.97)
+- Giới hạn tốc độ 40 km/h (độ tin cậy 0.29)",what_sign,pn(0.97); pl40(0.29); pl50(0.23),pn(0.97); pl40(0.29),True
+D:\20252\project2\data_v1_filtered\images\val\68863.jpg,pn,meaning,Biển này có ý nghĩa gì?,Cấm đỗ xe,"Cấm đỗ xe: Biển báo cấm các phương tiện đỗ xe tại khu vực có đặt biển. (độ tin cậy 0.97).
+Giới hạn tốc độ 40 km/h: Biển báo quy định tốc độ tối đa cho phép là 40 km/h. (độ tin cậy 0.29).",meaning,pn(0.97); pl40(0.29); pl50(0.23),pn(0.97); pl40(0.29),True
+D:\20252\project2\data_v1_filtered\images\val\68863.jpg,pn,group,Biển này thuộc nhóm nào?,Biển cấm,"Cấm đỗ xe thuộc nhóm Biển cấm.
+Giới hạn tốc độ 40 km/h thuộc nhóm Biển giới hạn tốc độ.",group,pn(0.97); pl40(0.29); pl50(0.23),pn(0.97); pl40(0.29),True
+D:\20252\project2\data_v1_filtered\images\val\68863.jpg,pn,summary,Tóm tắt tình huống trong ảnh.,Cấm đỗ xe,"Tóm tắt kết quả nhận diện:
+- Cấm đỗ xe (Biển cấm), độ tin cậy 0.97.
+- Giới hạn tốc độ 40 km/h (Biển giới hạn tốc độ), độ tin cậy 0.29.
+Tốc độ tối đa suy ra từ biển báo là 40 km/h.",summary,pn(0.97); pl40(0.29); pl50(0.23),pn(0.97); pl40(0.29),True
+D:\20252\project2\data_v1_filtered\images\val\68863.jpg,pn,parking,Có được đỗ xe không?,Không được đỗ xe,Không được đỗ xe. Căn cứ: hệ thống phát hiện biển Cấm đỗ xe trong ảnh.,parking,pn(0.97); pl40(0.29); pl50(0.23),pn(0.97); pl40(0.29),True
+D:\20252\project2\data_v1_filtered\images\val\68863.jpg,pn,situation_advice,Cần chú ý gì khi đi qua đoạn đường này?,Không đỗ xe,"Khi đi qua khu vực này, người lái cần chú ý:
+- Không vượt quá tốc độ 40 km/h.
+- Không đỗ xe tại khu vực có biển Cấm đỗ xe.",situation_advice,pn(0.97); pl40(0.29); pl50(0.23),pn(0.97); pl40(0.29),True
+D:\20252\project2\data_v1_filtered\images\val\31801 (3).jpg,pne,what_sign,Đây là biển gì?,Cấm đi vào,"Trong ảnh phát hiện các biển báo sau:
+- Giới hạn tốc độ 90 km/h (độ tin cậy 0.99)
+- Cấm đi vào (độ tin cậy 0.98)
+- Cấm xe khách lớn đi vào (độ tin cậy 0.98)
+- Cấm xe tải đi vào (độ tin cậy 0.97)",what_sign,pl90(0.99); pl90(0.98); pne(0.98); p3(0.98); pl90(0.98); p26(0.97),pl90(0.99); pne(0.98); p3(0.98); p26(0.97),True
+D:\20252\project2\data_v1_filtered\images\val\31801 (3).jpg,pne,meaning,Biển này có ý nghĩa gì?,Cấm đi vào,"Giới hạn tốc độ 90 km/h: Biển báo quy định tốc độ tối đa cho phép là 90 km/h. (độ tin cậy 0.99).
+Cấm đi vào: Biển báo cấm tất cả hoặc một số loại phương tiện đi vào theo chiều đặt biển. (độ tin cậy 0.98).
+Cấm xe khách lớn đi vào: Biển báo cấm xe khách lớn đi vào khu vực hoặc đoạn đường có đặt biển. (độ tin cậy 0.98).
+Cấm xe tải đi vào: Biển báo cấm xe tải đi vào đoạn đường hoặc khu vực có đặt biển. (độ tin cậy 0.97).",meaning,pl90(0.99); pl90(0.98); pne(0.98); p3(0.98); pl90(0.98); p26(0.97),pl90(0.99); pne(0.98); p3(0.98); p26(0.97),True
+D:\20252\project2\data_v1_filtered\images\val\31801 (3).jpg,pne,group,Biển này thuộc nhóm nào?,Biển cấm,"Giới hạn tốc độ 90 km/h thuộc nhóm Biển giới hạn tốc độ.
+Cấm đi vào thuộc nhóm Biển cấm.
+Cấm xe khách lớn đi vào thuộc nhóm Biển cấm.
+Cấm xe tải đi vào thuộc nhóm Biển cấm.",group,pl90(0.99); pl90(0.98); pne(0.98); p3(0.98); pl90(0.98); p26(0.97),pl90(0.99); pne(0.98); p3(0.98); p26(0.97),True
+D:\20252\project2\data_v1_filtered\images\val\31801 (3).jpg,pne,summary,Tóm tắt tình huống trong ảnh.,Cấm đi vào,"Tóm tắt kết quả nhận diện:
+- Giới hạn tốc độ 90 km/h (Biển giới hạn tốc độ), độ tin cậy 0.99.
+- Cấm đi vào (Biển cấm), độ tin cậy 0.98.
+- Cấm xe khách lớn đi vào (Biển cấm), độ tin cậy 0.98.
+- Cấm xe tải đi vào (Biển cấm), độ tin cậy 0.97.
+Tốc độ tối đa suy ra từ biển báo là 90 km/h.",summary,pl90(0.99); pl90(0.98); pne(0.98); p3(0.98); pl90(0.98); p26(0.97),pl90(0.99); pne(0.98); p3(0.98); p26(0.97),True
+D:\20252\project2\data_v1_filtered\images\val\31801 (3).jpg,pne,entry,Có được đi vào đường này không?,Không được đi vào,Không được đi vào. Căn cứ: hệ thống phát hiện biển Cấm đi vào trong ảnh.,entry,pl90(0.99); pl90(0.98); pne(0.98); p3(0.98); pl90(0.98); p26(0.97),pl90(0.99); pne(0.98); p3(0.98); p26(0.97),True
+D:\20252\project2\data_v1_filtered\images\val\31801 (3).jpg,pne,situation_advice,Cần chú ý gì khi đi qua đoạn đường này?,Không đi vào,"Khi đi qua khu vực này, người lái cần chú ý:
+- Không vượt quá tốc độ 90 km/h.
+- Không đi vào đường/khu vực có biển Cấm đi vào.
+- Xe tải không được đi vào đoạn đường có biển cấm.
+- Xe khách lớn không được đi vào đoạn đường có biển cấm.",situation_advice,pl90(0.99); pl90(0.98); pne(0.98); p3(0.98); pl90(0.98); p26(0.97),pl90(0.99); pne(0.98); p3(0.98); p26(0.97),True
+D:\20252\project2\data_v1_filtered\images\val\79444.jpg,p11,what_sign,Đây là biển gì?,Cấm bấm còi,"Trong ảnh phát hiện các biển báo sau:
+- Cấm bấm còi (độ tin cậy 1.00)
+- Cấm đỗ xe (độ tin cậy 0.89)
+- Giới hạn tốc độ 80 km/h (độ tin cậy 0.59)",what_sign,p11(1.00); pn(0.89); pl80(0.59); pl50(0.22); pl40(0.13),p11(1.00); pn(0.89); pl80(0.59),True
+D:\20252\project2\data_v1_filtered\images\val\79444.jpg,p11,meaning,Biển này có ý nghĩa gì?,Cấm bấm còi,"Cấm bấm còi: Biển báo cấm người điều khiển phương tiện sử dụng còi tại khu vực có đặt biển. (độ tin cậy 1.00).
+Cấm đỗ xe: Biển báo cấm các phương tiện đỗ xe tại khu vực có đặt biển. (độ tin cậy 0.89).
+Giới hạn tốc độ 80 km/h: Biển báo quy định tốc độ tối đa cho phép là 80 km/h. (độ tin cậy 0.59).",meaning,p11(1.00); pn(0.89); pl80(0.59); pl50(0.22); pl40(0.13),p11(1.00); pn(0.89); pl80(0.59),True
+D:\20252\project2\data_v1_filtered\images\val\79444.jpg,p11,group,Biển này thuộc nhóm nào?,Biển cấm,"Cấm bấm còi thuộc nhóm Biển cấm.
+Cấm đỗ xe thuộc nhóm Biển cấm.
+Giới hạn tốc độ 80 km/h thuộc nhóm Biển giới hạn tốc độ.",group,p11(1.00); pn(0.89); pl80(0.59); pl50(0.22); pl40(0.13),p11(1.00); pn(0.89); pl80(0.59),True
+D:\20252\project2\data_v1_filtered\images\val\79444.jpg,p11,summary,Tóm tắt tình huống trong ảnh.,Cấm bấm còi,"Tóm tắt kết quả nhận diện:
+- Cấm bấm còi (Biển cấm), độ tin cậy 1.00.
+- Cấm đỗ xe (Biển cấm), độ tin cậy 0.89.
+- Giới hạn tốc độ 80 km/h (Biển giới hạn tốc độ), độ tin cậy 0.59.
+Tốc độ tối đa suy ra từ biển báo là 80 km/h.",summary,p11(1.00); pn(0.89); pl80(0.59); pl50(0.22); pl40(0.13),p11(1.00); pn(0.89); pl80(0.59),True
+D:\20252\project2\data_v1_filtered\images\val\79444.jpg,p11,honking,Có được bấm còi không?,Không được bấm còi,Không được bấm còi. Căn cứ: hệ thống phát hiện biển Cấm bấm còi.,honking,p11(1.00); pn(0.89); pl80(0.59); pl50(0.22); pl40(0.13),p11(1.00); pn(0.89); pl80(0.59),True
+D:\20252\project2\data_v1_filtered\images\val\79444.jpg,p11,situation_advice,Cần chú ý gì khi đi qua đoạn đường này?,Không sử dụng còi,"Khi đi qua khu vực này, người lái cần chú ý:
+- Không vượt quá tốc độ 80 km/h.
+- Không đỗ xe tại khu vực có biển Cấm đỗ xe.
+- Không sử dụng còi tại khu vực có biển Cấm bấm còi.",situation_advice,p11(1.00); pn(0.89); pl80(0.59); pl50(0.22); pl40(0.13),p11(1.00); pn(0.89); pl80(0.59),True
+D:\20252\project2\data_v1_filtered\images\val\75515.jpg,p26,what_sign,Đây là biển gì?,Cấm xe tải đi vào,"Trong ảnh phát hiện các biển báo sau:
+- Cấm xe tải đi vào (độ tin cậy 0.99)
+- Đi bên phải (độ tin cậy 0.97)",what_sign,p26(0.99); i5(0.97),p26(0.99); i5(0.97),True
+D:\20252\project2\data_v1_filtered\images\val\75515.jpg,p26,meaning,Biển này có ý nghĩa gì?,Cấm xe tải đi vào,"Cấm xe tải đi vào: Biển báo cấm xe tải đi vào đoạn đường hoặc khu vực có đặt biển. (độ tin cậy 0.99).
+Đi bên phải: Biển báo yêu cầu phương tiện đi về phía bên phải theo hướng chỉ dẫn. (độ tin cậy 0.97).",meaning,p26(0.99); i5(0.97),p26(0.99); i5(0.97),True
+D:\20252\project2\data_v1_filtered\images\val\75515.jpg,p26,group,Biển này thuộc nhóm nào?,Biển cấm,"Cấm xe tải đi vào thuộc nhóm Biển cấm.
+Đi bên phải thuộc nhóm Biển bắt buộc.",group,p26(0.99); i5(0.97),p26(0.99); i5(0.97),True
+D:\20252\project2\data_v1_filtered\images\val\75515.jpg,p26,summary,Tóm tắt tình huống trong ảnh.,Cấm xe tải đi vào,"Tóm tắt kết quả nhận diện:
+- Cấm xe tải đi vào (Biển cấm), độ tin cậy 0.99.
+- Đi bên phải (Biển bắt buộc), độ tin cậy 0.97.",summary,p26(0.99); i5(0.97),p26(0.99); i5(0.97),True
+D:\20252\project2\data_v1_filtered\images\val\75515.jpg,p26,truck,Xe tải có được đi vào không?,Xe tải không được đi vào,Xe tải không được đi vào. Căn cứ: hệ thống phát hiện biển Cấm xe tải đi vào.,truck,p26(0.99); i5(0.97),p26(0.99); i5(0.97),True
+D:\20252\project2\data_v1_filtered\images\val\75515.jpg,p26,situation_advice,Cần chú ý gì khi đi qua đoạn đường này?,Xe tải không được đi vào,"Khi đi qua khu vực này, người lái cần chú ý:
+- Xe tải không được đi vào đoạn đường có biển cấm.
+- Cần đi về bên phải theo chỉ dẫn của biển báo.",situation_advice,p26(0.99); i5(0.97),p26(0.99); i5(0.97),True
+D:\20252\project2\data_v1_filtered\images\val\74550.jpg,i2,what_sign,Đây là biển gì?,Đường dành cho xe không động cơ,"Trong ảnh phát hiện các biển báo sau:
+- Đường dành cho xe không động cơ (độ tin cậy 0.99)
+- Đường dành cho xe cơ giới (độ tin cậy 0.96)
+- Giới hạn tốc độ 80 km/h (độ tin cậy 0.47)",what_sign,i2(0.99); i4(0.96); pl80(0.47),i2(0.99); i4(0.96); pl80(0.47),True
+D:\20252\project2\data_v1_filtered\images\val\74550.jpg,i2,meaning,Biển này có ý nghĩa gì?,Đường dành cho xe không động cơ,"Đường dành cho xe không động cơ: Biển báo chỉ dẫn đoạn đường hoặc làn đường dành cho các phương tiện không động cơ. (độ tin cậy 0.99).
+Đường dành cho xe cơ giới: Biển báo chỉ dẫn đoạn đường hoặc làn đường dành cho xe cơ giới. (độ tin cậy 0.96).
+Giới hạn tốc độ 80 km/h: Biển báo quy định tốc độ tối đa cho phép là 80 km/h. (độ tin cậy 0.47).",meaning,i2(0.99); i4(0.96); pl80(0.47),i2(0.99); i4(0.96); pl80(0.47),True
+D:\20252\project2\data_v1_filtered\images\val\74550.jpg,i2,group,Biển này thuộc nhóm nào?,Biển chỉ dẫn,"Đường dành cho xe không động cơ thuộc nhóm Biển chỉ dẫn.
+Đường dành cho xe cơ giới thuộc nhóm Biển chỉ dẫn.
+Giới hạn tốc độ 80 km/h thuộc nhóm Biển giới hạn tốc độ.",group,i2(0.99); i4(0.96); pl80(0.47),i2(0.99); i4(0.96); pl80(0.47),True
+D:\20252\project2\data_v1_filtered\images\val\74550.jpg,i2,summary,Tóm tắt tình huống trong ảnh.,Đường dành cho xe không động cơ,"Tóm tắt kết quả nhận diện:
+- Đường dành cho xe không động cơ (Biển chỉ dẫn), độ tin cậy 0.99.
+- Đường dành cho xe cơ giới (Biển chỉ dẫn), độ tin cậy 0.96.
+- Giới hạn tốc độ 80 km/h (Biển giới hạn tốc độ), độ tin cậy 0.47.
+Tốc độ tối đa suy ra từ biển báo là 80 km/h.",summary,i2(0.99); i4(0.96); pl80(0.47),i2(0.99); i4(0.96); pl80(0.47),True
+D:\20252\project2\data_v1_filtered\images\val\50361.jpg,i4,what_sign,Đây là biển gì?,Đường dành cho xe cơ giới,"Trong ảnh phát hiện các biển báo sau:
+- Đường dành cho xe cơ giới (độ tin cậy 1.00)
+- Hạn chế chiều cao (độ tin cậy 0.97)
+- Đường dành cho xe không động cơ (độ tin cậy 0.87)",what_sign,i4(1.00); ph(0.97); i2(0.87); i4(0.81); i2(0.07); i5(0.05),i4(1.00); ph(0.97); i2(0.87),True
+D:\20252\project2\data_v1_filtered\images\val\50361.jpg,i4,meaning,Biển này có ý nghĩa gì?,Đường dành cho xe cơ giới,"Đường dành cho xe cơ giới: Biển báo chỉ dẫn đoạn đường hoặc làn đường dành cho xe cơ giới. (độ tin cậy 1.00).
+Hạn chế chiều cao: Biển báo giới hạn chiều cao tối đa của phương tiện được phép đi qua. (độ tin cậy 0.97).
+Đường dành cho xe không động cơ: Biển báo chỉ dẫn đoạn đường hoặc làn đường dành cho các phương tiện không động cơ. (độ tin cậy 0.87).",meaning,i4(1.00); ph(0.97); i2(0.87); i4(0.81); i2(0.07); i5(0.05),i4(1.00); ph(0.97); i2(0.87),True
+D:\20252\project2\data_v1_filtered\images\val\50361.jpg,i4,group,Biển này thuộc nhóm nào?,Biển chỉ dẫn,"Đường dành cho xe cơ giới thuộc nhóm Biển chỉ dẫn.
+Hạn chế chiều cao thuộc nhóm Biển hạn chế.
+Đường dành cho xe không động cơ thuộc nhóm Biển chỉ dẫn.",group,i4(1.00); ph(0.97); i2(0.87); i4(0.81); i2(0.07); i5(0.05),i4(1.00); ph(0.97); i2(0.87),True
+D:\20252\project2\data_v1_filtered\images\val\50361.jpg,i4,summary,Tóm tắt tình huống trong ảnh.,Đường dành cho xe cơ giới,"Tóm tắt kết quả nhận diện:
+- Đường dành cho xe cơ giới (Biển chỉ dẫn), độ tin cậy 1.00.
+- Hạn chế chiều cao (Biển hạn chế), độ tin cậy 0.97.
+- Đường dành cho xe không động cơ (Biển chỉ dẫn), độ tin cậy 0.87.",summary,i4(1.00); ph(0.97); i2(0.87); i4(0.81); i2(0.07); i5(0.05),i4(1.00); ph(0.97); i2(0.87),True
+D:\20252\project2\data_v1_filtered\images\val\28228.jpg,i5,what_sign,Đây là biển gì?,Đi bên phải,"Trong ảnh phát hiện các biển báo sau:
+- Đi bên phải (độ tin cậy 0.98)
+- Cấm xe tải đi vào (độ tin cậy 0.95)
+- Giới hạn tốc độ 50 km/h (độ tin cậy 0.83)",what_sign,i5(0.98); p26(0.95); pl50(0.83); pl40(0.18); pl30(0.07); i5(0.07),i5(0.98); p26(0.95); pl50(0.83),True
+D:\20252\project2\data_v1_filtered\images\val\28228.jpg,i5,meaning,Biển này có ý nghĩa gì?,Đi bên phải,"Đi bên phải: Biển báo yêu cầu phương tiện đi về phía bên phải theo hướng chỉ dẫn. (độ tin cậy 0.98).
+Cấm xe tải đi vào: Biển báo cấm xe tải đi vào đoạn đường hoặc khu vực có đặt biển. (độ tin cậy 0.95).
+Giới hạn tốc độ 50 km/h: Biển báo quy định tốc độ tối đa cho phép là 50 km/h. (độ tin cậy 0.83).",meaning,i5(0.98); p26(0.95); pl50(0.83); pl40(0.18); pl30(0.07); i5(0.07),i5(0.98); p26(0.95); pl50(0.83),True
+D:\20252\project2\data_v1_filtered\images\val\28228.jpg,i5,group,Biển này thuộc nhóm nào?,Biển bắt buộc,"Đi bên phải thuộc nhóm Biển bắt buộc.
+Cấm xe tải đi vào thuộc nhóm Biển cấm.
+Giới hạn tốc độ 50 km/h thuộc nhóm Biển giới hạn tốc độ.",group,i5(0.98); p26(0.95); pl50(0.83); pl40(0.18); pl30(0.07); i5(0.07),i5(0.98); p26(0.95); pl50(0.83),True
+D:\20252\project2\data_v1_filtered\images\val\28228.jpg,i5,summary,Tóm tắt tình huống trong ảnh.,Đi bên phải,"Tóm tắt kết quả nhận diện:
+- Đi bên phải (Biển bắt buộc), độ tin cậy 0.98.
+- Cấm xe tải đi vào (Biển cấm), độ tin cậy 0.95.
+- Giới hạn tốc độ 50 km/h (Biển giới hạn tốc độ), độ tin cậy 0.83.
+Tốc độ tối đa suy ra từ biển báo là 50 km/h.",summary,i5(0.98); p26(0.95); pl50(0.83); pl40(0.18); pl30(0.07); i5(0.07),i5(0.98); p26(0.95); pl50(0.83),True
+D:\20252\project2\data_v1_filtered\images\val\28228.jpg,i5,direction,Phải đi bên nào?,bên phải,Phương tiện cần đi về bên phải theo chỉ dẫn của biển báo. Căn cứ: hệ thống phát hiện biển Đi bên phải.,direction,i5(0.98); p26(0.95); pl50(0.83); pl40(0.18); pl30(0.07); i5(0.07),i5(0.98); p26(0.95); pl50(0.83),True
+D:\20252\project2\data_v1_filtered\images\val\28228.jpg,i5,situation_advice,Cần chú ý gì khi đi qua đoạn đường này?,bên phải,"Khi đi qua khu vực này, người lái cần chú ý:
+- Không vượt quá tốc độ 50 km/h.
+- Xe tải không được đi vào đoạn đường có biển cấm.
+- Cần đi về bên phải theo chỉ dẫn của biển báo.",situation_advice,i5(0.98); p26(0.95); pl50(0.83); pl40(0.18); pl30(0.07); i5(0.07),i5(0.98); p26(0.95); pl50(0.83),True
+D:\20252\project2\data_v1_filtered\images\val\15342 (9).jpg,p3,what_sign,Đây là biển gì?,Cấm xe khách lớn đi vào,Đây là Cấm xe khách lớn đi vào. Căn cứ: mô hình phát hiện biển này với độ tin cậy 1.00.,what_sign,p3(1.00); p3(0.99); p3(0.99); p3(0.55),p3(1.00),True
+D:\20252\project2\data_v1_filtered\images\val\15342 (9).jpg,p3,meaning,Biển này có ý nghĩa gì?,Cấm xe khách lớn đi vào,Cấm xe khách lớn đi vào: Biển báo cấm xe khách lớn đi vào khu vực hoặc đoạn đường có đặt biển. (độ tin cậy 1.00).,meaning,p3(1.00); p3(0.99); p3(0.99); p3(0.55),p3(1.00),True
+D:\20252\project2\data_v1_filtered\images\val\15342 (9).jpg,p3,group,Biển này thuộc nhóm nào?,Biển cấm,Cấm xe khách lớn đi vào thuộc nhóm Biển cấm.,group,p3(1.00); p3(0.99); p3(0.99); p3(0.55),p3(1.00),True
+D:\20252\project2\data_v1_filtered\images\val\15342 (9).jpg,p3,summary,Tóm tắt tình huống trong ảnh.,Cấm xe khách lớn đi vào,"Tóm tắt kết quả nhận diện:
+- Cấm xe khách lớn đi vào (Biển cấm), độ tin cậy 1.00.",summary,p3(1.00); p3(0.99); p3(0.99); p3(0.55),p3(1.00),True
+D:\20252\project2\data_v1_filtered\images\val\15342 (9).jpg,p3,large_bus,Xe khách lớn có được đi vào không?,Xe khách lớn không được đi vào,Xe khách lớn không được đi vào. Căn cứ: hệ thống phát hiện biển Cấm xe khách lớn đi vào.,large_bus,p3(1.00); p3(0.99); p3(0.99); p3(0.55),p3(1.00),True
+D:\20252\project2\data_v1_filtered\images\val\15342 (9).jpg,p3,situation_advice,Cần chú ý gì khi đi qua đoạn đường này?,Xe khách lớn không được đi vào,"Khi đi qua khu vực này, người lái cần chú ý:
+- Xe khách lớn không được đi vào đoạn đường có biển cấm.",situation_advice,p3(1.00); p3(0.99); p3(0.99); p3(0.55),p3(1.00),True
+D:\20252\project2\data_v1_filtered\images\val\12893.jpg,ph,what_sign,Đây là biển gì?,Hạn chế chiều cao,Đây là Hạn chế chiều cao. Căn cứ: mô hình phát hiện biển này với độ tin cậy 0.99.,what_sign,ph(0.99),ph(0.99),True
+D:\20252\project2\data_v1_filtered\images\val\12893.jpg,ph,meaning,Biển này có ý nghĩa gì?,Hạn chế chiều cao,Hạn chế chiều cao: Biển báo giới hạn chiều cao tối đa của phương tiện được phép đi qua. (độ tin cậy 0.99).,meaning,ph(0.99),ph(0.99),True
+D:\20252\project2\data_v1_filtered\images\val\12893.jpg,ph,group,Biển này thuộc nhóm nào?,Biển hạn chế,Hạn chế chiều cao thuộc nhóm Biển hạn chế.,group,ph(0.99),ph(0.99),True
+D:\20252\project2\data_v1_filtered\images\val\12893.jpg,ph,summary,Tóm tắt tình huống trong ảnh.,Hạn chế chiều cao,"Tóm tắt kết quả nhận diện:
+- Hạn chế chiều cao (Biển hạn chế), độ tin cậy 0.99.",summary,ph(0.99),ph(0.99),True
+D:\20252\project2\data_v1_filtered\images\val\12893.jpg,ph,height,Cần chú ý gì về chiều cao?,chiều cao,Trong ảnh có biển hạn chế chiều cao. Người điều khiển cần chú ý chiều cao phương tiện trước khi đi qua.,height,ph(0.99),ph(0.99),True
+D:\20252\project2\data_v1_filtered\images\val\12893.jpg,ph,situation_advice,Cần chú ý gì khi đi qua đoạn đường này?,chiều cao,"Khi đi qua khu vực này, người lái cần chú ý:
+- Cần chú ý giới hạn chiều cao của phương tiện.",situation_advice,ph(0.99),ph(0.99),True
+D:\20252\project2\data_v1_filtered\images\val\57520 (2).jpg,pl20,what_sign,Đây là biển gì?,Giới hạn tốc độ 20 km/h,"Trong ảnh phát hiện các biển báo sau:
+- Giới hạn tốc độ 20 km/h (độ tin cậy 0.99)
+- Cấm bấm còi (độ tin cậy 0.98)",what_sign,pl20(0.99); p11(0.98),pl20(0.99); p11(0.98),True
+D:\20252\project2\data_v1_filtered\images\val\57520 (2).jpg,pl20,meaning,Biển này có ý nghĩa gì?,Giới hạn tốc độ 20 km/h,"Giới hạn tốc độ 20 km/h: Biển báo quy định tốc độ tối đa cho phép là 20 km/h. (độ tin cậy 0.99).
+Cấm bấm còi: Biển báo cấm người điều khiển phương tiện sử dụng còi tại khu vực có đặt biển. (độ tin cậy 0.98).",meaning,pl20(0.99); p11(0.98),pl20(0.99); p11(0.98),True
+D:\20252\project2\data_v1_filtered\images\val\57520 (2).jpg,pl20,group,Biển này thuộc nhóm nào?,Biển giới hạn tốc độ,"Giới hạn tốc độ 20 km/h thuộc nhóm Biển giới hạn tốc độ.
+Cấm bấm còi thuộc nhóm Biển cấm.",group,pl20(0.99); p11(0.98),pl20(0.99); p11(0.98),True
+D:\20252\project2\data_v1_filtered\images\val\57520 (2).jpg,pl20,summary,Tóm tắt tình huống trong ảnh.,Giới hạn tốc độ 20 km/h,"Tóm tắt kết quả nhận diện:
+- Giới hạn tốc độ 20 km/h (Biển giới hạn tốc độ), độ tin cậy 0.99.
+- Cấm bấm còi (Biển cấm), độ tin cậy 0.98.
+Tốc độ tối đa suy ra từ biển báo là 20 km/h.",summary,pl20(0.99); p11(0.98),pl20(0.99); p11(0.98),True
+D:\20252\project2\data_v1_filtered\images\val\57520 (2).jpg,pl20,speed_limit,Tốc độ tối đa là bao nhiêu?,20,Tốc độ tối đa cho phép là 20 km/h. Căn cứ: hệ thống phát hiện Giới hạn tốc độ 20 km/h với độ tin cậy 0.99.,speed_limit,pl20(0.99); p11(0.98),pl20(0.99); p11(0.98),True
+D:\20252\project2\data_v1_filtered\images\val\57520 (2).jpg,pl20,speed_limit,Có được chạy quá 20 km/h không?,20,Không được chạy quá 20 km/h. Căn cứ: hệ thống phát hiện Giới hạn tốc độ 20 km/h với độ tin cậy 0.99.,speed_limit,pl20(0.99); p11(0.98),pl20(0.99); p11(0.98),True
+D:\20252\project2\data_v1_filtered\images\val\57520 (2).jpg,pl20,situation_advice,Cần chú ý gì khi đi qua đoạn đường này?,20,"Khi đi qua khu vực này, người lái cần chú ý:
+- Không vượt quá tốc độ 20 km/h.
+- Không sử dụng còi tại khu vực có biển Cấm bấm còi.",situation_advice,pl20(0.99); p11(0.98),pl20(0.99); p11(0.98),True
+D:\20252\project2\data_v1_filtered\images\val\26892.jpg,pl30,what_sign,Đây là biển gì?,Giới hạn tốc độ 30 km/h,"Trong ảnh phát hiện các biển báo sau:
+- Giới hạn tốc độ 30 km/h (độ tin cậy 0.98)
+- Cấm đỗ xe (độ tin cậy 0.86)",what_sign,pl30(0.98); pn(0.86); p11(0.22),pl30(0.98); pn(0.86),True
+D:\20252\project2\data_v1_filtered\images\val\26892.jpg,pl30,meaning,Biển này có ý nghĩa gì?,Giới hạn tốc độ 30 km/h,"Giới hạn tốc độ 30 km/h: Biển báo quy định tốc độ tối đa cho phép là 30 km/h. (độ tin cậy 0.98).
+Cấm đỗ xe: Biển báo cấm các phương tiện đỗ xe tại khu vực có đặt biển. (độ tin cậy 0.86).",meaning,pl30(0.98); pn(0.86); p11(0.22),pl30(0.98); pn(0.86),True
+D:\20252\project2\data_v1_filtered\images\val\26892.jpg,pl30,group,Biển này thuộc nhóm nào?,Biển giới hạn tốc độ,"Giới hạn tốc độ 30 km/h thuộc nhóm Biển giới hạn tốc độ.
+Cấm đỗ xe thuộc nhóm Biển cấm.",group,pl30(0.98); pn(0.86); p11(0.22),pl30(0.98); pn(0.86),True
+D:\20252\project2\data_v1_filtered\images\val\26892.jpg,pl30,summary,Tóm tắt tình huống trong ảnh.,Giới hạn tốc độ 30 km/h,"Tóm tắt kết quả nhận diện:
+- Giới hạn tốc độ 30 km/h (Biển giới hạn tốc độ), độ tin cậy 0.98.
+- Cấm đỗ xe (Biển cấm), độ tin cậy 0.86.
+Tốc độ tối đa suy ra từ biển báo là 30 km/h.",summary,pl30(0.98); pn(0.86); p11(0.22),pl30(0.98); pn(0.86),True
+D:\20252\project2\data_v1_filtered\images\val\26892.jpg,pl30,speed_limit,Tốc độ tối đa là bao nhiêu?,30,Tốc độ tối đa cho phép là 30 km/h. Căn cứ: hệ thống phát hiện Giới hạn tốc độ 30 km/h với độ tin cậy 0.98.,speed_limit,pl30(0.98); pn(0.86); p11(0.22),pl30(0.98); pn(0.86),True
+D:\20252\project2\data_v1_filtered\images\val\26892.jpg,pl30,speed_limit,Có được chạy quá 30 km/h không?,30,Không được chạy quá 30 km/h. Căn cứ: hệ thống phát hiện Giới hạn tốc độ 30 km/h với độ tin cậy 0.98.,speed_limit,pl30(0.98); pn(0.86); p11(0.22),pl30(0.98); pn(0.86),True
+D:\20252\project2\data_v1_filtered\images\val\26892.jpg,pl30,situation_advice,Cần chú ý gì khi đi qua đoạn đường này?,30,"Khi đi qua khu vực này, người lái cần chú ý:
+- Không vượt quá tốc độ 30 km/h.
+- Không đỗ xe tại khu vực có biển Cấm đỗ xe.",situation_advice,pl30(0.98); pn(0.86); p11(0.22),pl30(0.98); pn(0.86),True
+D:\20252\project2\data_v1_filtered\images\val\80682.jpg,pl40,what_sign,Đây là biển gì?,Giới hạn tốc độ 40 km/h,"Trong ảnh phát hiện các biển báo sau:
+- Giới hạn tốc độ 40 km/h (độ tin cậy 0.98)
+- Cấm xe tải đi vào (độ tin cậy 0.96)
+- Cấm xe khách lớn đi vào (độ tin cậy 0.58)",what_sign,pl40(0.98); p26(0.96); p3(0.58); p26(0.52); p26(0.27); p26(0.27); ph(0.06); p26(0.06),pl40(0.98); p26(0.96); p3(0.58),True
+D:\20252\project2\data_v1_filtered\images\val\80682.jpg,pl40,meaning,Biển này có ý nghĩa gì?,Giới hạn tốc độ 40 km/h,"Giới hạn tốc độ 40 km/h: Biển báo quy định tốc độ tối đa cho phép là 40 km/h. (độ tin cậy 0.98).
+Cấm xe tải đi vào: Biển báo cấm xe tải đi vào đoạn đường hoặc khu vực có đặt biển. (độ tin cậy 0.96).
+Cấm xe khách lớn đi vào: Biển báo cấm xe khách lớn đi vào khu vực hoặc đoạn đường có đặt biển. (độ tin cậy 0.58).",meaning,pl40(0.98); p26(0.96); p3(0.58); p26(0.52); p26(0.27); p26(0.27); ph(0.06); p26(0.06),pl40(0.98); p26(0.96); p3(0.58),True
+D:\20252\project2\data_v1_filtered\images\val\80682.jpg,pl40,group,Biển này thuộc nhóm nào?,Biển giới hạn tốc độ,"Giới hạn tốc độ 40 km/h thuộc nhóm Biển giới hạn tốc độ.
+Cấm xe tải đi vào thuộc nhóm Biển cấm.
+Cấm xe khách lớn đi vào thuộc nhóm Biển cấm.",group,pl40(0.98); p26(0.96); p3(0.58); p26(0.52); p26(0.27); p26(0.27); ph(0.06); p26(0.06),pl40(0.98); p26(0.96); p3(0.58),True
+D:\20252\project2\data_v1_filtered\images\val\80682.jpg,pl40,summary,Tóm tắt tình huống trong ảnh.,Giới hạn tốc độ 40 km/h,"Tóm tắt kết quả nhận diện:
+- Giới hạn tốc độ 40 km/h (Biển giới hạn tốc độ), độ tin cậy 0.98.
+- Cấm xe tải đi vào (Biển cấm), độ tin cậy 0.96.
+- Cấm xe khách lớn đi vào (Biển cấm), độ tin cậy 0.58.
+Tốc độ tối đa suy ra từ biển báo là 40 km/h.",summary,pl40(0.98); p26(0.96); p3(0.58); p26(0.52); p26(0.27); p26(0.27); ph(0.06); p26(0.06),pl40(0.98); p26(0.96); p3(0.58),True
+D:\20252\project2\data_v1_filtered\images\val\80682.jpg,pl40,speed_limit,Tốc độ tối đa là bao nhiêu?,40,Tốc độ tối đa cho phép là 40 km/h. Căn cứ: hệ thống phát hiện Giới hạn tốc độ 40 km/h với độ tin cậy 0.98.,speed_limit,pl40(0.98); p26(0.96); p3(0.58); p26(0.52); p26(0.27); p26(0.27); ph(0.06); p26(0.06),pl40(0.98); p26(0.96); p3(0.58),True
+D:\20252\project2\data_v1_filtered\images\val\80682.jpg,pl40,speed_limit,Có được chạy quá 40 km/h không?,40,Không được chạy quá 40 km/h. Căn cứ: hệ thống phát hiện Giới hạn tốc độ 40 km/h với độ tin cậy 0.98.,speed_limit,pl40(0.98); p26(0.96); p3(0.58); p26(0.52); p26(0.27); p26(0.27); ph(0.06); p26(0.06),pl40(0.98); p26(0.96); p3(0.58),True
+D:\20252\project2\data_v1_filtered\images\val\80682.jpg,pl40,situation_advice,Cần chú ý gì khi đi qua đoạn đường này?,40,"Khi đi qua khu vực này, người lái cần chú ý:
+- Không vượt quá tốc độ 40 km/h.
+- Xe tải không được đi vào đoạn đường có biển cấm.
+- Xe khách lớn không được đi vào đoạn đường có biển cấm.",situation_advice,pl40(0.98); p26(0.96); p3(0.58); p26(0.52); p26(0.27); p26(0.27); ph(0.06); p26(0.06),pl40(0.98); p26(0.96); p3(0.58),True
+D:\20252\project2\data_v1_filtered\images\val\72324.jpg,pl50,what_sign,Đây là biển gì?,Giới hạn tốc độ 50 km/h,"Trong ảnh phát hiện các biển báo sau:
+- Giới hạn tốc độ 50 km/h (độ tin cậy 0.98)
+- Cấm bấm còi (độ tin cậy 0.94)
+- Cấm đỗ xe (độ tin cậy 0.94)
+- Đi bên phải (độ tin cậy 0.87)
+- Cấm đi vào (độ tin cậy 0.80)",what_sign,pl50(0.98); p11(0.94); pn(0.94); i5(0.87); pne(0.80); i5(0.46),pl50(0.98); p11(0.94); pn(0.94); i5(0.87); pne(0.80),True
+D:\20252\project2\data_v1_filtered\images\val\72324.jpg,pl50,meaning,Biển này có ý nghĩa gì?,Giới hạn tốc độ 50 km/h,"Giới hạn tốc độ 50 km/h: Biển báo quy định tốc độ tối đa cho phép là 50 km/h. (độ tin cậy 0.98).
+Cấm bấm còi: Biển báo cấm người điều khiển phương tiện sử dụng còi tại khu vực có đặt biển. (độ tin cậy 0.94).
+Cấm đỗ xe: Biển báo cấm các phương tiện đỗ xe tại khu vực có đặt biển. (độ tin cậy 0.94).
+Đi bên phải: Biển báo yêu cầu phương tiện đi về phía bên phải theo hướng chỉ dẫn. (độ tin cậy 0.87).
+Cấm đi vào: Biển báo cấm tất cả hoặc một số loại phương tiện đi vào theo chiều đặt biển. (độ tin cậy 0.80).",meaning,pl50(0.98); p11(0.94); pn(0.94); i5(0.87); pne(0.80); i5(0.46),pl50(0.98); p11(0.94); pn(0.94); i5(0.87); pne(0.80),True
+D:\20252\project2\data_v1_filtered\images\val\72324.jpg,pl50,group,Biển này thuộc nhóm nào?,Biển giới hạn tốc độ,"Giới hạn tốc độ 50 km/h thuộc nhóm Biển giới hạn tốc độ.
+Cấm bấm còi thuộc nhóm Biển cấm.
+Cấm đỗ xe thuộc nhóm Biển cấm.
+Đi bên phải thuộc nhóm Biển bắt buộc.
+Cấm đi vào thuộc nhóm Biển cấm.",group,pl50(0.98); p11(0.94); pn(0.94); i5(0.87); pne(0.80); i5(0.46),pl50(0.98); p11(0.94); pn(0.94); i5(0.87); pne(0.80),True
+D:\20252\project2\data_v1_filtered\images\val\72324.jpg,pl50,summary,Tóm tắt tình huống trong ảnh.,Giới hạn tốc độ 50 km/h,"Tóm tắt kết quả nhận diện:
+- Giới hạn tốc độ 50 km/h (Biển giới hạn tốc độ), độ tin cậy 0.98.
+- Cấm bấm còi (Biển cấm), độ tin cậy 0.94.
+- Cấm đỗ xe (Biển cấm), độ tin cậy 0.94.
+- Đi bên phải (Biển bắt buộc), độ tin cậy 0.87.
+- Cấm đi vào (Biển cấm), độ tin cậy 0.80.
+Tốc độ tối đa suy ra từ biển báo là 50 km/h.",summary,pl50(0.98); p11(0.94); pn(0.94); i5(0.87); pne(0.80); i5(0.46),pl50(0.98); p11(0.94); pn(0.94); i5(0.87); pne(0.80),True
+D:\20252\project2\data_v1_filtered\images\val\72324.jpg,pl50,speed_limit,Tốc độ tối đa là bao nhiêu?,50,Tốc độ tối đa cho phép là 50 km/h. Căn cứ: hệ thống phát hiện Giới hạn tốc độ 50 km/h với độ tin cậy 0.98.,speed_limit,pl50(0.98); p11(0.94); pn(0.94); i5(0.87); pne(0.80); i5(0.46),pl50(0.98); p11(0.94); pn(0.94); i5(0.87); pne(0.80),True
+D:\20252\project2\data_v1_filtered\images\val\72324.jpg,pl50,speed_limit,Có được chạy quá 50 km/h không?,50,Không được chạy quá 50 km/h. Căn cứ: hệ thống phát hiện Giới hạn tốc độ 50 km/h với độ tin cậy 0.98.,speed_limit,pl50(0.98); p11(0.94); pn(0.94); i5(0.87); pne(0.80); i5(0.46),pl50(0.98); p11(0.94); pn(0.94); i5(0.87); pne(0.80),True
+D:\20252\project2\data_v1_filtered\images\val\72324.jpg,pl50,situation_advice,Cần chú ý gì khi đi qua đoạn đường này?,50,"Khi đi qua khu vực này, người lái cần chú ý:
+- Không vượt quá tốc độ 50 km/h.
+- Không đỗ xe tại khu vực có biển Cấm đỗ xe.
+- Không đi vào đường/khu vực có biển Cấm đi vào.
+- Không sử dụng còi tại khu vực có biển Cấm bấm còi.
+- Cần đi về bên phải theo chỉ dẫn của biển báo.",situation_advice,pl50(0.98); p11(0.94); pn(0.94); i5(0.87); pne(0.80); i5(0.46),pl50(0.98); p11(0.94); pn(0.94); i5(0.87); pne(0.80),True
+D:\20252\project2\data_v1_filtered\images\val\90551.jpg,pl80,what_sign,Đây là biển gì?,Giới hạn tốc độ 80 km/h,"Trong ảnh phát hiện các biển báo sau:
+- Giới hạn tốc độ 80 km/h (độ tin cậy 1.00)
+- Cấm đỗ xe (độ tin cậy 0.95)",what_sign,pl80(1.00); pn(0.95),pl80(1.00); pn(0.95),True
+D:\20252\project2\data_v1_filtered\images\val\90551.jpg,pl80,meaning,Biển này có ý nghĩa gì?,Giới hạn tốc độ 80 km/h,"Giới hạn tốc độ 80 km/h: Biển báo quy định tốc độ tối đa cho phép là 80 km/h. (độ tin cậy 1.00).
+Cấm đỗ xe: Biển báo cấm các phương tiện đỗ xe tại khu vực có đặt biển. (độ tin cậy 0.95).",meaning,pl80(1.00); pn(0.95),pl80(1.00); pn(0.95),True
+D:\20252\project2\data_v1_filtered\images\val\90551.jpg,pl80,group,Biển này thuộc nhóm nào?,Biển giới hạn tốc độ,"Giới hạn tốc độ 80 km/h thuộc nhóm Biển giới hạn tốc độ.
+Cấm đỗ xe thuộc nhóm Biển cấm.",group,pl80(1.00); pn(0.95),pl80(1.00); pn(0.95),True
+D:\20252\project2\data_v1_filtered\images\val\90551.jpg,pl80,summary,Tóm tắt tình huống trong ảnh.,Giới hạn tốc độ 80 km/h,"Tóm tắt kết quả nhận diện:
+- Giới hạn tốc độ 80 km/h (Biển giới hạn tốc độ), độ tin cậy 1.00.
+- Cấm đỗ xe (Biển cấm), độ tin cậy 0.95.
+Tốc độ tối đa suy ra từ biển báo là 80 km/h.",summary,pl80(1.00); pn(0.95),pl80(1.00); pn(0.95),True
+D:\20252\project2\data_v1_filtered\images\val\90551.jpg,pl80,speed_limit,Tốc độ tối đa là bao nhiêu?,80,Tốc độ tối đa cho phép là 80 km/h. Căn cứ: hệ thống phát hiện Giới hạn tốc độ 80 km/h với độ tin cậy 1.00.,speed_limit,pl80(1.00); pn(0.95),pl80(1.00); pn(0.95),True
+D:\20252\project2\data_v1_filtered\images\val\90551.jpg,pl80,speed_limit,Có được chạy quá 80 km/h không?,80,Không được chạy quá 80 km/h. Căn cứ: hệ thống phát hiện Giới hạn tốc độ 80 km/h với độ tin cậy 1.00.,speed_limit,pl80(1.00); pn(0.95),pl80(1.00); pn(0.95),True
+D:\20252\project2\data_v1_filtered\images\val\90551.jpg,pl80,situation_advice,Cần chú ý gì khi đi qua đoạn đường này?,80,"Khi đi qua khu vực này, người lái cần chú ý:
+- Không vượt quá tốc độ 80 km/h.
+- Không đỗ xe tại khu vực có biển Cấm đỗ xe.",situation_advice,pl80(1.00); pn(0.95),pl80(1.00); pn(0.95),True
+D:\20252\project2\data_v1_filtered\images\val\31801 (3).jpg,pl90,what_sign,Đây là biển gì?,Giới hạn tốc độ 90 km/h,"Trong ảnh phát hiện các biển báo sau:
+- Giới hạn tốc độ 90 km/h (độ tin cậy 0.99)
+- Cấm đi vào (độ tin cậy 0.98)
+- Cấm xe khách lớn đi vào (độ tin cậy 0.98)
+- Cấm xe tải đi vào (độ tin cậy 0.97)",what_sign,pl90(0.99); pl90(0.98); pne(0.98); p3(0.98); pl90(0.98); p26(0.97),pl90(0.99); pne(0.98); p3(0.98); p26(0.97),True
+D:\20252\project2\data_v1_filtered\images\val\31801 (3).jpg,pl90,meaning,Biển này có ý nghĩa gì?,Giới hạn tốc độ 90 km/h,"Giới hạn tốc độ 90 km/h: Biển báo quy định tốc độ tối đa cho phép là 90 km/h. (độ tin cậy 0.99).
+Cấm đi vào: Biển báo cấm tất cả hoặc một số loại phương tiện đi vào theo chiều đặt biển. (độ tin cậy 0.98).
+Cấm xe khách lớn đi vào: Biển báo cấm xe khách lớn đi vào khu vực hoặc đoạn đường có đặt biển. (độ tin cậy 0.98).
+Cấm xe tải đi vào: Biển báo cấm xe tải đi vào đoạn đường hoặc khu vực có đặt biển. (độ tin cậy 0.97).",meaning,pl90(0.99); pl90(0.98); pne(0.98); p3(0.98); pl90(0.98); p26(0.97),pl90(0.99); pne(0.98); p3(0.98); p26(0.97),True
+D:\20252\project2\data_v1_filtered\images\val\31801 (3).jpg,pl90,group,Biển này thuộc nhóm nào?,Biển giới hạn tốc độ,"Giới hạn tốc độ 90 km/h thuộc nhóm Biển giới hạn tốc độ.
+Cấm đi vào thuộc nhóm Biển cấm.
+Cấm xe khách lớn đi vào thuộc nhóm Biển cấm.
+Cấm xe tải đi vào thuộc nhóm Biển cấm.",group,pl90(0.99); pl90(0.98); pne(0.98); p3(0.98); pl90(0.98); p26(0.97),pl90(0.99); pne(0.98); p3(0.98); p26(0.97),True
+D:\20252\project2\data_v1_filtered\images\val\31801 (3).jpg,pl90,summary,Tóm tắt tình huống trong ảnh.,Giới hạn tốc độ 90 km/h,"Tóm tắt kết quả nhận diện:
+- Giới hạn tốc độ 90 km/h (Biển giới hạn tốc độ), độ tin cậy 0.99.
+- Cấm đi vào (Biển cấm), độ tin cậy 0.98.
+- Cấm xe khách lớn đi vào (Biển cấm), độ tin cậy 0.98.
+- Cấm xe tải đi vào (Biển cấm), độ tin cậy 0.97.
+Tốc độ tối đa suy ra từ biển báo là 90 km/h.",summary,pl90(0.99); pl90(0.98); pne(0.98); p3(0.98); pl90(0.98); p26(0.97),pl90(0.99); pne(0.98); p3(0.98); p26(0.97),True
+D:\20252\project2\data_v1_filtered\images\val\31801 (3).jpg,pl90,speed_limit,Tốc độ tối đa là bao nhiêu?,90,Tốc độ tối đa cho phép là 90 km/h. Căn cứ: hệ thống phát hiện Giới hạn tốc độ 90 km/h với độ tin cậy 0.99.,speed_limit,pl90(0.99); pl90(0.98); pne(0.98); p3(0.98); pl90(0.98); p26(0.97),pl90(0.99); pne(0.98); p3(0.98); p26(0.97),True
+D:\20252\project2\data_v1_filtered\images\val\31801 (3).jpg,pl90,speed_limit,Có được chạy quá 90 km/h không?,90,Không được chạy quá 90 km/h. Căn cứ: hệ thống phát hiện Giới hạn tốc độ 90 km/h với độ tin cậy 0.99.,speed_limit,pl90(0.99); pl90(0.98); pne(0.98); p3(0.98); pl90(0.98); p26(0.97),pl90(0.99); pne(0.98); p3(0.98); p26(0.97),True
+D:\20252\project2\data_v1_filtered\images\val\31801 (3).jpg,pl90,situation_advice,Cần chú ý gì khi đi qua đoạn đường này?,90,"Khi đi qua khu vực này, người lái cần chú ý:
+- Không vượt quá tốc độ 90 km/h.
+- Không đi vào đường/khu vực có biển Cấm đi vào.
+- Xe tải không được đi vào đoạn đường có biển cấm.
+- Xe khách lớn không được đi vào đoạn đường có biển cấm.",situation_advice,pl90(0.99); pl90(0.98); pne(0.98); p3(0.98); pl90(0.98); p26(0.97),pl90(0.99); pne(0.98); p3(0.98); p26(0.97),True

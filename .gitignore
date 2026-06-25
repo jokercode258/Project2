@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.env
+
+# Dataset / model / large files
+data/
+dataset/
+datasets/
+data_v1_filtered/
+models/
+checkpoints/
+weights/
+runs/
+
+*.pt
+*.pth
+*.onnx
+*.ckpt
+*.mp4
+*.avi
+*.mov
+*.mkv
+*.zip
+*.rar
+*.7z
+
+# Generated reports / inference images
+reports/inference/
+reports/preview_filtered/
