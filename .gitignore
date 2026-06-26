@@ -9,7 +9,9 @@ venv/
 data/
 dataset/
 datasets/
-data_v1_filtered/
+data_v1_filtered/images/
+data_v1_filtered/labels/
+data_v1_filtered/demo.mp4
 models/
 checkpoints/
 weights/

@@ -1,0 +1,20 @@
+path: D:/20252/project2/data_v1_filtered
+train: images/train
+val: images/val
+test:
+names:
+  0: pn
+  1: pne
+  2: p11
+  3: p26
+  4: i2
+  5: i4
+  6: i5
+  7: p3
+  8: ph
+  9: pl20
+  10: pl30
+  11: pl40
+  12: pl50
+  13: pl80
+  14: pl90
