@@ -2,13 +2,11 @@ from pathlib import Path
 import sys
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
-SRC_DIR = PROJECT_ROOT / "src"
 
-if str(SRC_DIR) not in sys.path:
-    sys.path.append(str(SRC_DIR))
+if str(PROJECT_ROOT) not in sys.path:
+    sys.path.insert(0, str(PROJECT_ROOT))
 
 from ultralytics import YOLO
-from pathlib import Path
 import shutil
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -26,13 +24,14 @@ def get_col(df, keyword):
 def main():
     ensure_dirs()
 
-    if not BEST_MODEL_PATH.exists():
-        raise FileNotFoundError(
-            f"Không tìm thấy model tại {BEST_MODEL_PATH}. "
-            "Hãy copy best.pt vào thư mục models trước."
-        )
-
-    model = YOLO(str(BEST_MODEL_PATH))
+    if BEST_MODEL_PATH.exists():
+        print(f"Found existing model: {BEST_MODEL_PATH}")
+        print("Continue training from existing best model.")
+        model = YOLO(str(BEST_MODEL_PATH))
+    else:
+        print("No existing best model found.")
+        print("Training from YOLO26n pretrained model.")
+        model = YOLO("yolo26n.pt")
 
     results = model.train(
         data=str(DATA_YAML),
