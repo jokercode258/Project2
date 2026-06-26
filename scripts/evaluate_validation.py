@@ -38,14 +38,14 @@ def main():
         exist_ok=True
     )
 
-    print("\n📊 OVERALL METRICS:")
+    print("\n OVERALL METRICS:")
     print("=" * 60)
     print(f"Precision: {val_results.box.mp:.4f}")
     print(f"Recall:    {val_results.box.mr:.4f}")
     print(f"mAP50:     {val_results.box.map50:.4f}")
     print(f"mAP50-95:  {val_results.box.map:.4f}")
 
-    print("\n📊 CLASS-WISE mAP50:")
+    print("\n CLASS-WISE mAP50:")
     print("=" * 60)
 
     ap50_by_class = {
@@ -87,7 +87,7 @@ def main():
     with open(VALIDATION_INFERENCE_DIR / "predictions.json", "w", encoding="utf-8") as f:
         json.dump(predictions_log, f, indent=2, ensure_ascii=False)
 
-    print(f"\n✅ Inference saved to: {VALIDATION_INFERENCE_DIR}")
+    print(f"\n Inference saved to: {VALIDATION_INFERENCE_DIR}")
 
 
 if __name__ == "__main__":

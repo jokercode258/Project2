@@ -57,7 +57,7 @@ def main():
     csv_path = save_dir / "results.csv"
 
     if not csv_path.exists():
-        print("❌ Không tìm thấy results.csv")
+        print(" Không tìm thấy results.csv")
         return
 
     df = pd.read_csv(csv_path)
@@ -71,28 +71,28 @@ def main():
     val_loss_col = get_col(df, "val/box_loss")
 
     if None in [p_col, r_col, map50_col, map95_col]:
-        print("❌ Không tìm đủ cột metrics")
+        print(" Không tìm đủ cột metrics")
         print(df.columns)
         return
 
     last = df.iloc[-1]
     best = df.loc[df[map95_col].idxmax()]
 
-    print("\n📊 FINAL METRICS:")
+    print("\n FINAL METRICS:")
     print(f"Epoch: {last['epoch']}")
     print(f"Precision: {last[p_col]:.4f}")
     print(f"Recall: {last[r_col]:.4f}")
     print(f"mAP@0.5: {last[map50_col]:.4f}")
     print(f"mAP@0.5-0.95: {last[map95_col]:.4f}")
 
-    print("\n🏆 BEST EPOCH:")
+    print("\n BEST EPOCH:")
     print(f"Epoch: {best['epoch']}")
     print(f"Precision: {best[p_col]:.4f}")
     print(f"Recall: {best[r_col]:.4f}")
     print(f"mAP@0.5: {best[map50_col]:.4f}")
     print(f"mAP@0.5-0.95: {best[map95_col]:.4f}")
 
-    print("\n📊 LAST 5 EPOCHS:")
+    print("\n LAST 5 EPOCHS:")
     print(df[['epoch', p_col, r_col, map50_col, map95_col]].tail())
 
     plt.figure()
@@ -133,9 +133,9 @@ def main():
 
     if new_best.exists():
         shutil.copy2(new_best, BEST_MODEL_PATH)
-        print(f"\n✅ Copied best model to: {BEST_MODEL_PATH}")
+        print(f"\n Copied best model to: {BEST_MODEL_PATH}")
 
-    print(f"\n✅ Training reports saved to: {save_dir}")
+    print(f"\n Training reports saved to: {save_dir}")
 
 
 if __name__ == "__main__":

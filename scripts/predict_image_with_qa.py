@@ -63,31 +63,31 @@ def predict_image_with_qa(image_path, question, conf_threshold=0.05, iou_thresho
 
     image_path = Path(image_path)
     if not BEST_MODEL_PATH.exists():
-        print("❌ Không tìm thấy model:")
+        print(" Không tìm thấy model:")
         print(BEST_MODEL_PATH)
-        print("\n👉 Hãy kiểm tra file models/baseline_v1_best.pt")
+        print("\n Hãy kiểm tra file models/baseline_v1_best.pt")
         return
 
     if not image_path.exists():
-        print("❌ Không tìm thấy ảnh:")
+        print(" Không tìm thấy ảnh:")
         print(image_path)
         return
 
     image = cv2.imread(str(image_path))
     if image is None:
-        print("❌ Không đọc được ảnh:")
+        print(" Không đọc được ảnh:")
         print(image_path)
         return
 
-    print("🚀 Loading model...")
+    print(" Loading model...")
     print("Model:", BEST_MODEL_PATH)
     model = YOLO(str(BEST_MODEL_PATH))
 
-    print("\n🖼️ Image:", image_path)
-    print("❓ Question:", question)
-    print(f"🔎 YOLO conf threshold: {conf_threshold}")
-    print(f"🧠 QA conf threshold: {qa_conf_threshold}")
-    print(f"🖼️ Predict imgsz: {imgsz}")
+    print("\n Image:", image_path)
+    print(" Question:", question)
+    print(f" YOLO conf threshold: {conf_threshold}")
+    print(f" QA conf threshold: {qa_conf_threshold}")
+    print(f" Predict imgsz: {imgsz}")
 
     results = model.predict(image, conf=conf_threshold, iou=iou_threshold, imgsz=imgsz, verbose=False)
     result = results[0]
@@ -134,7 +134,7 @@ def predict_image_with_qa(image_path, question, conf_threshold=0.05, iou_thresho
         is_reliable = det["confidence"] >= qa_conf_threshold and det["class_code"] in reliable_keys
         draw_detection(frame=image, box=det["box_xyxy"], label=det["display_name"], conf=det["confidence"], is_reliable=is_reliable)
 
-    print("\n📌 All YOLO detections:")
+    print("\n All YOLO detections:")
     if detections:
         for det in detections:
             status = "USED_BY_QA" if det["confidence"] >= qa_conf_threshold else "IGNORED_LOW_CONF"
@@ -142,7 +142,7 @@ def predict_image_with_qa(image_path, question, conf_threshold=0.05, iou_thresho
     else:
         print("- Không có detection nào từ YOLO")
 
-    print("\n✅ Reliable detections used by QA:")
+    print("\n Reliable detections used by QA:")
     if reliable_detections:
         for det in reliable_detections:
             print(f"- {det['class_code']}: {det['name_vi']} | conf={det['confidence']:.2f}")
@@ -150,14 +150,14 @@ def predict_image_with_qa(image_path, question, conf_threshold=0.05, iou_thresho
         print("- Không có detection đủ tin cậy để đưa vào QA")
 
     if ignored_detections:
-        print("\n⚠️ Ignored low-confidence detections:")
+        print("\n Ignored low-confidence detections:")
         for det in ignored_detections:
             print(f"- {det['class_code']}: {det['name_vi']} | conf={det['confidence']:.2f}")
 
-    print("\n🧠 Question intent:")
+    print("\n Question intent:")
     print(intent)
 
-    print("\n🤖 Answer:")
+    print("\n Answer:")
     print(answer)
 
     output_image_path = IMAGE_QA_OUTPUT_DIR / f"{image_path.stem}_qa.jpg"
@@ -184,10 +184,10 @@ def predict_image_with_qa(image_path, question, conf_threshold=0.05, iou_thresho
     with open(output_json_path, "w", encoding="utf-8") as f:
         json.dump(result_log, f, indent=2, ensure_ascii=False)
 
-    print("\n✅ Output image saved to:")
+    print("\n Output image saved to:")
     print(output_image_path)
 
-    print("\n✅ QA result saved to:")
+    print("\n QA result saved to:")
     print(output_json_path)
 
 

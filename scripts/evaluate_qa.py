@@ -169,12 +169,12 @@ def main():
     if not QA_TEST_CASES_PATH.exists():
         raise FileNotFoundError(f"Không tìm thấy file QA test cases: {QA_TEST_CASES_PATH}")
 
-    print("🚀 Loading model...")
+    print(" Loading model...")
     print("Model:", BEST_MODEL_PATH)
 
     model = YOLO(str(BEST_MODEL_PATH))
 
-    print("\n📄 Loading QA test cases...")
+    print("\n Loading QA test cases...")
     print("Test cases:", QA_TEST_CASES_PATH)
 
     df = pd.read_csv(QA_TEST_CASES_PATH)
@@ -245,10 +245,10 @@ def main():
     print("\nAccuracy by question type:")
     print(summary_by_type)
 
-    print("\n✅ QA results saved to:")
+    print("\n QA results saved to:")
     print(QA_RESULTS_PATH)
 
-    print("\n✅ QA summary saved to:")
+    print("\n QA summary saved to:")
     print(summary_path)
 
 

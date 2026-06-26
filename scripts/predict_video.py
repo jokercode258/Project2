@@ -45,30 +45,30 @@ def predict_on_video(video_path, model_path, output_path, conf_threshold=0.4, io
     output_path = Path(output_path)
 
     if not model_path.exists():
-        print("❌ Không tìm thấy model:")
+        print(" Không tìm thấy model:")
         print(model_path)
         return
 
     if not video_path.exists():
-        print("❌ Không tìm thấy video:")
+        print(" Không tìm thấy video:")
         print(video_path)
         return
 
-    print("🚀 Loading model...")
+    print(" Loading model...")
     print("Model path:", model_path)
     model = YOLO(str(model_path))
 
-    print("\n📌 Model classes:")
+    print("\n Model classes:")
     for class_id, class_code in model.names.items():
         display_name = get_display_name(class_code, use_vietnamese=False)
         print(f"{class_id:2d}: {class_code:6s} -> {display_name}")
 
-    print("\n📂 Opening video...")
+    print("\n Opening video...")
     print("Video path:", video_path)
 
     cap = cv2.VideoCapture(str(video_path))
     if not cap.isOpened():
-        print("❌ OpenCV không mở được video.")
+        print(" OpenCV không mở được video.")
         return
 
     fps = cap.get(cv2.CAP_PROP_FPS)
@@ -79,21 +79,21 @@ def predict_on_video(video_path, model_path, output_path, conf_threshold=0.4, io
     height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
     total_frames = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
 
-    print(f"🎬 Video info: {width}x{height} | {fps:.1f} FPS | {total_frames} frames")
+    print(f" Video info: {width}x{height} | {fps:.1f} FPS | {total_frames} frames")
 
     output_path.parent.mkdir(parents=True, exist_ok=True)
     fourcc = cv2.VideoWriter_fourcc(*"mp4v")
     out = cv2.VideoWriter(str(output_path), fourcc, fps, (width, height))
 
     if not out.isOpened():
-        print("❌ Không tạo được output video.")
+        print(" Không tạo được output video.")
         cap.release()
         return
 
     frame_count = 0
     start_time = time.time()
 
-    print("\n⚡ Running inference...")
+    print("\n Running inference...")
 
     while True:
         ret, frame = cap.read()
@@ -138,12 +138,12 @@ def predict_on_video(video_path, model_path, output_path, conf_threshold=0.4, io
 
     total_time = time.time() - start_time
 
-    print("\n✅ DONE")
-    print(f"📁 Output video: {output_path}")
-    print(f"🎞️ Total frames: {frame_count}")
-    print(f"⏱️ Total time: {total_time:.2f}s")
+    print("\n DONE")
+    print(f" Output video: {output_path}")
+    print(f" Total frames: {frame_count}")
+    print(f" Total time: {total_time:.2f}s")
     if total_time > 0:
-        print(f"⚡ Average FPS: {frame_count / total_time:.2f}")
+        print(f" Average FPS: {frame_count / total_time:.2f}")
 
 
 def main():

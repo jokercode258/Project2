@@ -122,7 +122,7 @@ def collect_best_image_per_class(yolo_conf=YOLO_CONF, qa_conf=QA_CONF, imgsz=IMG
     if not BEST_MODEL_PATH.exists():
         raise FileNotFoundError(f"Không tìm thấy model tại: {BEST_MODEL_PATH}")
 
-    print("🚀 Loading model for best-case selection...")
+    print(" Loading model for best-case selection...")
     print("Model:", BEST_MODEL_PATH)
 
     model = YOLO(str(BEST_MODEL_PATH))
@@ -132,7 +132,7 @@ def collect_best_image_per_class(yolo_conf=YOLO_CONF, qa_conf=QA_CONF, imgsz=IMG
     label_paths = sorted(VAL_LABELS_DIR.glob("*.txt"))
     total = len(label_paths)
 
-    print(f"\n🔎 Scanning validation labels: {total} files")
+    print(f"\n Scanning validation labels: {total} files")
     print(f"YOLO conf: {yolo_conf}")
     print(f"QA conf:   {qa_conf}")
     print(f"imgsz:     {imgsz}")
@@ -224,9 +224,9 @@ def build_rows_from_class_to_image(class_to_image):
     for class_id, class_code in CLASS_ID_TO_CODE.items():
         image_path = class_to_image.get(class_code)
         if image_path is None:
-            print(f"⚠️ Không tìm thấy ảnh cho class {class_code}")
+            print(f"Không tìm thấy ảnh cho class {class_code}")
             continue
-        print(f"✅ {class_code}: {image_path}")
+        print(f" {class_code}: {image_path}")
         add_general_questions(rows, class_code, image_path)
         add_speed_questions(rows, class_code, image_path)
         add_specific_questions(rows, class_code, image_path)
@@ -252,11 +252,11 @@ def main():
     QA_DIR.mkdir(parents=True, exist_ok=True)
 
     if args.mode == "label":
-        print("🔎 Mode: label")
+        print(" Mode: label")
         class_to_image = collect_first_image_per_class()
         output_path = QA_DIR / "qa_test_cases_label.csv"
     else:
-        print("🔎 Mode: best")
+        print(" Mode: best")
         selected = collect_best_image_per_class(yolo_conf=args.yolo_conf, qa_conf=args.qa_conf, imgsz=args.imgsz)
         class_to_image = {class_code: item["image"] for class_code, item in selected.items()}
         output_path = QA_DIR / "qa_test_cases_best.csv"
@@ -268,13 +268,13 @@ def main():
     rows = build_rows_from_class_to_image(class_to_image)
     write_csv(rows, output_path)
 
-    print("\n✅ QA test cases created:")
+    print("\n QA test cases created:")
     print(output_path)
     print(f"Total cases: {len(rows)}")
 
     if args.set_default:
         write_csv(rows, QA_TEST_CASES_PATH)
-        print("\n✅ Also saved as default test cases:")
+        print("\n Also saved as default test cases:")
         print(QA_TEST_CASES_PATH)
 
 
