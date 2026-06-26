@@ -12,15 +12,20 @@ Hệ thống sử dụng mô hình **YOLO26n** để phát hiện biển báo tr
 * Có được đi vào đường này không?
 * Có được đỗ xe không?
 
-## 2. Công nghệ sử dụng
+## 2. Clone project
 
-* Python
-* Ultralytics YOLO
-* OpenCV
-* Tkinter
-* Pandas
-* Matplotlib
-* Pillow
+```powershell
+git clone https://github.com/jokercode258/Project2.git
+cd Project2
+```
+
+Sau khi clone, project đã có sẵn file cấu hình dữ liệu:
+
+```text
+data_v1_filtered/data.yaml
+```
+
+Tuy nhiên, do dữ liệu TT100K có kích thước lớn nên repository không lưu trực tiếp ảnh và nhãn trong thư mục `images/` và `labels/`.
 
 ## 3. Cài đặt môi trường
 
@@ -39,63 +44,76 @@ Kích hoạt môi trường ảo trên Windows PowerShell:
 Cài đặt các thư viện cần thiết:
 
 ```powershell
-pip install ultralytics opencv-python pandas matplotlib pillow numpy
+pip install ultralytics opencv-python pandas matplotlib pillow numpy kaggle
 ```
 
-## 4. Chuẩn bị dữ liệu
+## 4. Tải dữ liệu TT100K
 
-Do dữ liệu TT100K có kích thước lớn nên repository không lưu trực tiếp dữ liệu.
+Dữ liệu sử dụng trong project được xây dựng từ bộ dữ liệu **TT100K**.
 
-Người dùng cần tải bộ dữ liệu **TT100K** gốc
-
-## 5. Cấu trúc project
+Link tải dữ liệu:
 
 ```text
-PROJECT2/
-├── apps/
-│   └── desktop_app.py
-│
-├── scripts/
-│   ├── train_baseline.py
-│   ├── evaluate_validation.py
-│   ├── create_qa_test_cases.py
-│   ├── evaluate_qa.py
-│   ├── predict_image_with_qa.py
-│   └── predict_video.py
-│
-├── src/
-│   ├── __init__.py
-│   ├── config.py
-│   ├── qa_module.py
-│   └── sign_knowledge.py
-│
-├── data_v1_filtered/
-├── models/
-├── reports/
-├── metadata/
-└── README.md
+https://www.kaggle.com/datasets/braunge/tt100k
 ```
+
+Có thể tải thủ công từ trình duyệt, hoặc tải bằng Kaggle API:
+
+```powershell
+mkdir data_raw
+kaggle datasets download -d braunge/tt100k -p data_raw --unzip
+```
+
+Cần cấu hình file `kaggle.json` tại:
+
+```text
+C:\Users\<ten_user>\.kaggle\kaggle.json
+```
+
+## 5. Chuẩn bị dữ liệu huấn luyện
+
+Project chỉ sử dụng 15 lớp biển báo:
+
+```text
+pn, pne, p11, p26, i2, i4, i5, p3, ph, pl20, pl30, pl40, pl50, pl80, pl90
+```
+
+Sau khi tải TT100K, cần lọc các lớp trên và đặt dữ liệu theo cấu trúc YOLO như sau:
+
+```text
+data_v1_filtered/
+├── images/
+│   ├── train/
+│   └── val/
+├── labels/
+│   ├── train/
+│   └── val/
+└── data.yaml
+```
+
+Trong đó:
+
+* `images/train/`: chứa ảnh huấn luyện.
+* `images/val/`: chứa ảnh validation.
+* `labels/train/`: chứa nhãn YOLO của tập train.
+* `labels/val/`: chứa nhãn YOLO của tập validation.
+* `data.yaml`: file cấu hình dữ liệu đã có sẵn trong repository.
+
+Lưu ý: `train_baseline.py` không train trực tiếp từ TT100K gốc. Dữ liệu cần được lọc và chuyển sang định dạng YOLO trước khi huấn luyện.
 
 ## 6. Huấn luyện mô hình
 
-Sau khi đã chuẩn bị dữ liệu trong thư mục `data_v1_filtered/`, chạy:
+Sau khi dữ liệu đã được chuẩn bị trong thư mục `data_v1_filtered/`, chạy lệnh:
 
 ```powershell
 python scripts/train_baseline.py
 ```
 
-Script `train_baseline.py` đọc dữ liệu từ:
+Script huấn luyện sẽ đọc cấu hình từ:
 
 ```text
 data_v1_filtered/data.yaml
 ```
-
-Cơ chế huấn luyện:
-
-* Nếu chưa có `models/baseline_v1_best.pt`, hệ thống sẽ train lần đầu từ model YOLO26n pretrained.
-* Nếu đã có `models/baseline_v1_best.pt`, hệ thống sẽ load model này và train tiếp từ checkpoint tốt nhất trước đó.
-
-Cách này giúp có thể train nhiều lần mà không cần huấn luyện lại từ đầu.
 
 Model tốt nhất sau huấn luyện được lưu tại:
 
@@ -103,66 +121,13 @@ Model tốt nhất sau huấn luyện được lưu tại:
 models/baseline_v1_best.pt
 ```
 
-## 7. Đánh giá mô hình
+## 7. Chạy ứng dụng demo
 
-Đánh giá mô hình YOLO trên tập validation:
-
-```powershell
-python scripts/evaluate_validation.py
-```
-
-Đánh giá module hỏi đáp ở chế độ QA-focused:
-
-```powershell
-python scripts/create_qa_test_cases.py --mode best --set-default
-python scripts/evaluate_qa.py
-```
-
-Đánh giá toàn bộ pipeline end-to-end:
-
-```powershell
-python scripts/create_qa_test_cases.py --mode label --set-default
-python scripts/evaluate_qa.py
-```
-
-## 8. Chạy ứng dụng demo
-
-Chạy ứng dụng desktop:
+Sau khi đã có model, chạy ứng dụng desktop:
 
 ```powershell
 python apps/desktop_app.py
 ```
 
-Ứng dụng cho phép người dùng:
-
-1. Chọn ảnh từ máy tính.
-2. Nhập câu hỏi.
-3. Chạy nhận diện biển báo.
-4. Xem ảnh đã vẽ bounding box.
-5. Xem câu trả lời của hệ thống.
-
-## 9. Dự đoán ảnh và video
-
-Dự đoán ảnh kèm hỏi đáp:
-
-```powershell
-python scripts/predict_image_with_qa.py
-```
-
-Dự đoán video demo:
-
-```powershell
-python scripts/predict_video.py
-```
-
-Video đầu vào mặc định:
-
-```text
-data_v1_filtered/demo.mp4
-```
-
-Video kết quả được lưu tại:
-
-```text
-reports/inference/output_video_named.mp4
+Ứng dụng cho phép người dùng chọn ảnh, nhập câu hỏi, nhận diện biển báo và xem câu trả lời.
 ```
